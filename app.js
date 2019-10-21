@@ -25,6 +25,8 @@ function Hard(question, answer, pointValue){
   allThreeHundred.push(this);
 }
 
+
+
 // Questions
 new Easy('Easy Question?', 'maybe', 100);
 new Easy('Easy Question 2?', 'maybe 2', 100);

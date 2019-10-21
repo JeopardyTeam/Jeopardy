@@ -24,9 +24,7 @@ function Hard(question, answer, pointValue){
   this.pointValue = pointValue;
   allThreeHundred.push(this);
 }
-function flip() {
-  $('.card').toggleClass('flipped');
-}
+
 
 
 // Questions

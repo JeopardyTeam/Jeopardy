@@ -17,39 +17,39 @@
     </nav>
   </header>
 
-  <main>
+  <main id='mainEl'>
     <div class="row">
-      <div class="oneHund">
+      <div id='' class="oneHund">
         <h2>$100</h2>
       </div>
-      <div class="twoHund">
+      <div id='' class="twoHund">
         <h2>$200</h2>
       </div>
-      <div class="threeHund">
+      <div id='' class="threeHund">
         <h2>$300</h2>
       </div>
     </div>
 
-    <div class="row">
-      <div class="oneHund">
+    <div id = 'parentEl' class="row">
+      <div id=''  class="oneHund">
         <h2>$100</h2>
       </div>
-      <div class="twoHund">
+      <div id='' class="twoHund">
         <h2>$200</h2>
       </div>
-      <div class="threeHund">
+      <div id='' class="threeHund">
         <h2>$300</h2>
       </div>
     </div>
-
+ 
     <div class="row">
-      <div class="oneHund">
+      <div id='' class="oneHund">
         <h2>$100</h2>
       </div>
-      <div class="twoHund">
+      <div id='' class="twoHund">
         <h2>$200</h2>
       </div>
-      <div class="threeHund">
+      <div id='' class="threeHund">
         <h2>$300</h2>
       </div>
     </div>
@@ -59,7 +59,14 @@
   <footer>
 
   </footer>
-  <script src="app.js"></script>
+  <script>
+    document.getElementById('mainEl').addEventListener("click", function(){
+      event.target.id = "newid";
+      //document.getElementById('parentEl').appendChild(event.target);
+      console.log(event.target.id);
+    });
+    </script>
+
 </body>
 
 </html>

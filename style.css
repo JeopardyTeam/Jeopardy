@@ -1,18 +1,18 @@
-main *{
-  display: inline;
+.row{
+  display: inline-block;
 }
 
-main .catOne{
-  display: inline;
-  background-color: green;
+.oneHund{
+  width: 33%;
+  height: 33%;
 }
 
-.catTwo{
-  display: inline;
-  background-color: blue;
+.twoHund{
+  width: 33%;
+  height: 33%;
 }
 
-.catThree{
-  background-color: red;
-  display: inline;
+.threeHund{
+  width: 33%;
+  height: 33%;  
 }

@@ -1,6 +1,6 @@
 var questionsOne = ['onehundred', 'onehundred2', 'onehunderd3'];
 var questionsTwo = ['twohundred', 'twohundred', 'twohundred'];
-var questionsThree =   this.question = ['questionthree', 'questionthree', 'questionthree'];
+var questionsThree = ['questionthree', 'questionthree', 'questionthree'];
 
 function oneHundred(answer, pointValue) {
   this.answer = [];

@@ -1,76 +1,67 @@
-var questionsOne = ['onehundred', 'onehundred2', 'onehunderd3'];
-var questionsTwo = ['twohundred', 'twohundred', 'twohundred'];
-var questionsThree =   this.question = ['questionthree', 'questionthree', 'questionthree'];
+var allOneHundred = [];
+var allTwoHundred =[];
+var allThreeHundred = [];
 
-function oneHundred(answer, pointValue) {
-  this.answer = [];
+function Easy(question, answer, pointValue) {
+  this.question = question;
+  this.answer = answer;
   this.pointValue = pointValue;
+  allOneHundred.push(this);
 }
 
-function twoHundred(answer, pointValue) {
-  this.answer =[];
+function Medium(question, answer, pointValue){
+  this.question = question;
+  this.answer = answer;
   this.pointValue = pointValue;
+  allTwoHundred.push(this);
 }
 
-function threeHundred(answer, pointValue) {
-  this.answer =[];
+function Hard(question, answer, pointValue){
+  this.question = question;
+  this.answer = answer;
   this.pointValue = pointValue;
+  allThreeHundred.push(this);
 }
 
-var oneHundQuest = document.getElementsByClassName('oneHund')[0];
-var oneHundQuest2 = document.getElementsByClassName('oneHund')[1];
-var oneHundQuest3 = document.getElementsByClassName('oneHund')[2];
+// Questions
+new Easy('Easy Question?', 'maybe', 100);
+new Easy('Easy Question 2?', 'maybe 2', 100);
+new Easy('Easy Question 3?', 'maybe 3', 100);
 
-var twoHundQuest = document.getElementsByClassName('twoHund')[0];
-var twoHundQuest2 = document.getElementsByClassName('twoHund')[1];
-var twoHundQuest3 = document.getElementsByClassName('twoHund')[2];
+new Medium('Medium Question?', 'maybe', 200);
+new Medium('Medium Question 2?', 'maybe 2', 200);
+new Medium('Medium Question 3?', 'maybe 3', 200);
 
-var threeHundQuest = document.getElementsByClassName('threeHund')[0];
-var threeHundQuest2 = document.getElementsByClassName('threeHund')[1];
-var threeHundQuest3 = document.getElementsByClassName('threeHund')[2];
+new Hard('Hard Question?', 'maybe', 300);
+new Hard('Hard Question 2?', 'maybe 2', 300);
+new Hard('Hard Question 3?', 'maybe 3', 300);
 
-function renderQuestOne(){
-  var firstQuestion = document.createElement('p');
-  var secondQuestion = document.createElement('p');
-  var thirdQuestion = document.createElement('p');
-
-  firstQuestion.textContent = `${questionsOne[0]}`;
-  secondQuestion.textContent = `${questionsOne[1]}`;
-  thirdQuestion.textContent = `${questionsOne[2]}`;
-
-  oneHundQuest.appendChild(firstQuestion);
-  oneHundQuest2.appendChild(secondQuestion);
-  oneHundQuest3.appendChild(thirdQuestion);
+function one(){
+  for (var i = 0; i < Easy.length; i++){
+    var oneHundQuest = document.getElementsByClassName('oneHund')[i];
+    var firstQuestion = document.createElement('p');
+    firstQuestion.textContent = `${allOneHundred[i].question}`;
+    oneHundQuest.appendChild(firstQuestion);
+  }
 }
+one();
 
-function renderQuestTwo(){
-  var firstQuestion = document.createElement('p');
-  var secondQuestion = document.createElement('p');
-  var thirdQuestion = document.createElement('p');
-
-  firstQuestion.textContent = `${questionsTwo[0]}`;
-  secondQuestion.textContent = `${questionsTwo[1]}`;
-  thirdQuestion.textContent = `${questionsTwo[2]}`;
-
-  twoHundQuest.appendChild(firstQuestion);
-  twoHundQuest2.appendChild(secondQuestion);
-  twoHundQuest3.appendChild(thirdQuestion);
+function two(){
+  for (var j = 0; j < Medium.length; j++){
+    var twoHundQuest = document.getElementsByClassName('twoHund')[j];
+    var secondQuestion = document.createElement('p');
+    secondQuestion.textContent = `${allTwoHundred[j].question}`;
+    twoHundQuest.appendChild(secondQuestion);
+  }
 }
+two();
 
-function renderQuestThree(){
-  var firstQuestion = document.createElement('p');
-  var secondQuestion = document.createElement('p');
-  var thirdQuestion = document.createElement('p');
-
-  firstQuestion.textContent = `${questionsThree[0]}`;
-  secondQuestion.textContent = `${questionsThree[1]}`;
-  thirdQuestion.textContent = `${questionsThree[2]}`;
-
-  threeHundQuest.appendChild(firstQuestion);
-  threeHundQuest2.appendChild(secondQuestion);
-  threeHundQuest3.appendChild(thirdQuestion);
+function three(){
+  for (var k = 0; k < Hard.length; k++){
+    var threeHundQuest = document.getElementsByClassName('threeHund')[k];
+    var thirdQuestion = document.createElement('p');
+    thirdQuestion.textContent = `${allThreeHundred[k].question}`;
+    threeHundQuest.appendChild(thirdQuestion);
+  }
 }
-renderQuestOne();
-renderQuestTwo();
-renderQuestThree();
-oneHundQuest[0];
+three();

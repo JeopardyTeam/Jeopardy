@@ -16,6 +16,10 @@ function threeHundred(answer, pointValue) {
   this.answer =[];
   this.pointValue = pointValue;
 }
+function flip() {
+  $('.card').toggleClass('flipped');
+}
+
 
 var oneHundQuest = document.getElementsByClassName('oneHund')[0];
 var oneHundQuest2 = document.getElementsByClassName('oneHund')[1];

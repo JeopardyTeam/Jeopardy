@@ -51,4 +51,7 @@ h2:hover{
 } */
 #newid{
   transform: rotatey(180deg) scale(4);
+  opacity:1;
+  color:rgba(0, 128, 0, 0);
+  
 }

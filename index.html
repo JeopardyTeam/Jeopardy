@@ -19,9 +19,9 @@
 
   <main id='mainEl'>
     <div class="row">
-      <div id='' class="oneHund">
-        <h2>$100</h2>
-      </div>
+        <div id='' class="oneHund">
+          <h2>$100</h2>
+        </div>
       <div id='' class="twoHund">
         <h2>$200</h2>
       </div>
@@ -60,11 +60,24 @@
 
   </footer>
   <script>
-    document.getElementById('mainEl').addEventListener("click", function(){
-      event.target.id = "newid";
-      //document.getElementById('parentEl').appendChild(event.target);
-      console.log(event.target.id);
-    });
+    document.querySelectorAll('.row').forEach(item => {
+    item.addEventListener('click', event => {
+    event.target.id = "newid";
+    
+    var back = document.createElement('h2');
+    var text = document.createTextNode('water');
+    back.appendChild(text);
+    document.getElementById('main').appendChild(back);
+    
+    // document.getElementById('h2') = 'This is new.'
+  })
+})
+
+    // document.getElementById('mainEl').addEventListener("click", function(){
+    //   event.target.id = "newid";
+    //   //document.getElementById('parentEl').appendChild(event.target);
+    //   console.log(event.target.id);
+    // });
     </script>
 
 </body>

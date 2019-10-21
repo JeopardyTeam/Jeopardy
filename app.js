@@ -1,6 +1,8 @@
+
 var allOneHundred = [];
 var allTwoHundred =[];
 var allThreeHundred = [];
+
 
 function Easy(question, answer, pointValue) {
   this.question = question;

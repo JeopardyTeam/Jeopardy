@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+html {
+  background: #2d3436;
+    
+}
+h2 {
+  text-decoration: underline;
+  font-family: 'Press Start 2P', cursive;
+
+}
+nav {
+  color: rgb(228, 194, 3);
+  text-align: center;
+  font-family: 'Korinna-Regular';
+}
+body {
+  color: white;
+}
+
+li {
+  list-style-position: inside;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+main {
+  font-family: 'Korinna-Regular';
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+}
+

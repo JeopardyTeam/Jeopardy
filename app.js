@@ -1,3 +1,5 @@
+
+
 //question answer point value
 
 function oneHundred(question, answer, pointValue) {

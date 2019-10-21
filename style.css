@@ -49,6 +49,19 @@ h2:hover{
   -webkit-transform: rotate(180deg);
    -ms-transform: rotate(180deg);
 } */
+
 #newid{
-  transform: rotatey(180deg) scale(4);
+  /* -webkit-transition: 1s; */
+  transform: rotateY(180deg) scale(1);
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 98%;
+  height: 98%;
+  /* margin-top: -50px;
+  margin-left: 100px; */
+  /* height: 55%; */
+}
+#newid::after{
+  backface-visibility: hidden;
 }

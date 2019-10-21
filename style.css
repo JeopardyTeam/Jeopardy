@@ -1,0 +1,18 @@
+main *{
+  display: inline;
+}
+
+main .catOne{
+  display: inline;
+  background-color: green;
+}
+
+.catTwo{
+  display: inline;
+  background-color: blue;
+}
+
+.catThree{
+  background-color: red;
+  display: inline;
+}

@@ -150,6 +150,11 @@ p #quest{
   color: black;
   background-color: lightblue;
 }
+.cardFull{
+  width:150%;
+  height:50%;
+  position: fixed;
+}
 
 .quest1{
 

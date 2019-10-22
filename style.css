@@ -51,6 +51,7 @@ h2:hover{
 } */
 
 #newid{
+<<<<<<< HEAD
 
   transform: rotatey(180deg) scale(4);
 <<<<<<< HEAD
@@ -61,14 +62,40 @@ h2:hover{
   left:pageLeft;
 
   
+=======
+  -webkit-transition: 3s;
+  transform: rotateY(180deg) scale(1);
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 98%;
+  height: 98%;
+  /* margin-top: -50px;
+  margin-left: 100px; */
+  /* height: 55%; */
+>>>>>>> 2247801cf0a0fb47d4c6e6d3d43047c79329099d
 }
+
 p #quest{
   color:rgba(red, rgba(0, 128, 0, 0), blue, alpha);
   font-size: 20pt;
 }
 #questClick{
   color:black;
-  
-
 }
+<<<<<<< HEAD
 >>>>>>> fa56a0cc9f8c415388dea05883c2759502b2fdff
+=======
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 150px;
+  color: black;
+  background-color: lightblue;
+}
+>>>>>>> 2247801cf0a0fb47d4c6e6d3d43047c79329099d

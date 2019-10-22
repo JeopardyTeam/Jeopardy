@@ -69,3 +69,10 @@ function three(){
   }
 }
 three();
+
+var overlay =  document.getElementById('overlay').addEventListener('click', off);
+
+function off() {
+  document.getElementById('overlay').style.display = 'none';
+}
+

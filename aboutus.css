@@ -5,7 +5,7 @@ html {
 nav {
     color: rgb(228, 194, 3);
     text-align: center;
-    font-family: 'Korinna-Regular';
+    font-family: font79357;
     margin-left: 165px;
 }
 
@@ -25,13 +25,9 @@ nav {
     margin-right: 80px;
 }
 
-@font-face {
-    font-family: 'Korinna-Regular';
-    src: 'Korinna-Regular.otf';
-}
 
 main {
-    font-family: 'Korinna-Regular';
+    font-family: font79357;
     font-size: 30px;
     width: 1350px;
     height: 650px;

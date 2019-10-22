@@ -112,8 +112,10 @@
       </div>
     </div>
 
-    <div id="overlay">Welcome to Jeopardy! <br> <br> Click to play!</div>
-
+    <div id="overlay">Welcome to Jeopardy! <br>
+      <input type="text" required="required" placeholder="Username...">
+      <button id="button">Play</button>
+      <br> Click to play!</div>
 
   </main>
 
@@ -121,7 +123,8 @@
     <p>&copy; 2019 Code 201-d53</p>
   </footer>
   <script>
-    document.getElementById('overlay').addEventListener('click', function () {
+
+    document.getElementById('button').addEventListener('click', function () {
       document.getElementById('overlay').style.display = 'none'
     });
   </script>

@@ -1,9 +1,11 @@
 html {
   background: rgb(29, 67, 235);
 }
+
 body {
   font-family: font79357;
 }
+
 #highScores, #aboutUs {
   font-family: font79357;
   text-align: center;
@@ -18,16 +20,19 @@ body {
   position:relative;
   width:21%;
 }
+
 .category2{
   display:inline-block;
   position:relative;
   width:21%;
 }
+
 .category3{
   display:inline-block;
   position:relative;
   width:21%;
 }
+
 .card {
   font-size: 2em;
   background-color: transparent;
@@ -109,7 +114,6 @@ p #quest{
   color: black;
   background: rgb(29, 67, 235);
   color: rgb(228, 194, 3);
-
 }
 
 .cardFull{

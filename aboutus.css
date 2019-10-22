@@ -114,8 +114,11 @@ p {
     transform: scale(1.0);
     transition-duration: 1s;
     transform: rotatey(180deg) scale(2);
-   color: rgba(255, 255, 255, 0); */
+   color: rgba(255, 255, 255, 0);
 }
+ #Austin {
+   color: rgba(255, 255, 255, 0); 
+ } */
 
 /* #Austin {
     margin-top: 30px;

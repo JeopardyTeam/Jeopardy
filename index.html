@@ -19,40 +19,40 @@
   </header>
 
   <main id='mainEl'>
-
+    <div id = 'fullscreen'>
     <div class='category1'>
-      <div class='card'>
-        <div id='row' class="row">
+      <div class='card' id = ''>
+        <div class="row">
           <div class='card-front'>
             <h2> $100 </h2>
 
           </div>
-          <div class='card-back quest1'>Question </div>
+          <div class='card-back quest1'>Question</div>
         </div>
       </div>
 
-      <div class='card'>
-        <div id='row' class="row">
+      <div class='card' id = ''>
+        <div class="row">
           <div class='card-front'>
             <h2> $200 </h2>
           </div>
-          <div class='card-back quest2'>Question </div>
+          <div class='card-back quest2'>Question</div>
         </div>
       </div>
 
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $300 </h2>
           </div>
-          <div class='card-back quest3'>Question </div>
+          <div class='card-back quest3'>Question</div>
         </div>
       </div>
     </div>
 
     <div class='category2'>
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $100 </h2>
           </div>
@@ -61,7 +61,7 @@
       </div>
 
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $200 </h2>
           </div>
@@ -70,7 +70,7 @@
       </div>
 
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $300 </h2>
           </div>
@@ -81,7 +81,7 @@
 
     <div class='category3'>
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $100 </h2>
           </div>
@@ -90,7 +90,7 @@
       </div>
 
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $200 </h2>
           </div>
@@ -99,7 +99,7 @@
       </div>
 
       <div class='card'>
-        <div id='row' class="row">
+        <div class="row">
           <div class='card-front'>
             <h2> $300 </h2>
           </div>
@@ -107,7 +107,7 @@
         </div>
       </div>
     </div>
-
+  </div>
 
       <div id="overlay">Welcome to Jeopardy! <br> <br> Click to play!</div>
 
@@ -120,25 +120,14 @@
   <script>
     document.getElementById('overlay').addEventListener('click', function(){
       document.getElementById('overlay').style.display = 'none'
-    })
-    // document.querySelectorAll('row').forEach(item => {
-    //   item.addEventListener('click', event => {
-    //     event.target.id = "newid"; 
-    //     console.log('mehehehe');
-
-    //   })})
-    // var back = document.createElement('h2');
-    // var text = document.createTextNode('water');
-    // back.appendChild(text);
-    // document.getElementById('main').appendChild(back);
-
- 
-
-
-    // document.getElementsByClassName('card').addEventListener("click", function(){
-    //   event.target.id = "newid";
-    //   console.log(event.target.id);
-    // });
+    });
+    </script>
+    <script>
+    document.getElementById('fullscreen').addEventListener('click', function(){
+     
+     console.log(event.target); 
+     event.target.class = 'cardFull';
+    });
   </script>
 
   <script src='app.js'></script>

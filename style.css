@@ -58,7 +58,6 @@ body {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
- 
 .card:hover .row {
   z-index: 100;
   font-size: 25%;
@@ -85,20 +84,22 @@ body {
   color: rgb(228, 194, 3);
 }
  
-.card-back {
-  background-color: rgb(29, 67, 235);
-  color: rgb(228, 194, 3);
-  transform: rotateY(180deg);
-}
-main {
-  font-family: 'Korinna-Regular';
-  font-size: 30px;
-  width: 1350px;
-  height: 650px;
-  border: 1px solid black;
-  margin-left: 50px;
-  margin-top: 30px;
-  text-align: center;
+
+   .card-back {
+     background-color: rgb(29, 67, 235);
+     color: rgb(228, 194, 3);
+     transform: rotateY(180deg);
+   }
+   main {
+    font-family: font79357;
+    font-size: 30px;
+    width: 1350px;
+    height: 650px;
+    border: 1px solid black;
+    margin-left: 50px;
+    margin-top: 30px;
+    text-align: center;
+
 }
 #newid{
   transform: rotatey(180deg) scale(4);
@@ -153,6 +154,11 @@ p #quest{
   font-size: 150px;
   color: black;
   background-color: lightblue;
+}
+.cardFull{
+  width:150%;
+  height:50%;
+  position: fixed;
 }
 
 .quest1{

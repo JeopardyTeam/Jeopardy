@@ -51,24 +51,41 @@ h2:hover{
 } */
 
 #newid{
-
   transform: rotatey(180deg) scale(4);
-<<<<<<< HEAD
-}
-=======
   color:rgba(0, 128, 0, 0);
   top:pageTop;
   left:pageLeft;
 
-  
+ 
+  -webkit-transition: 3s;
+  transform: rotateY(180deg) scale(1);
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 98%;
+  height: 98%;
+  /* margin-top: -50px;
+  margin-left: 100px; */
+  /* height: 55%; */
+
 }
+
 p #quest{
   color:rgba(red, rgba(0, 128, 0, 0), blue, alpha);
   font-size: 20pt;
 }
 #questClick{
   color:black;
-  
-
 }
->>>>>>> fa56a0cc9f8c415388dea05883c2759502b2fdff
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 150px;
+  color: black;
+  background-color: lightblue;
+}

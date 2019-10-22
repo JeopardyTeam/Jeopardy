@@ -118,11 +118,11 @@ nav{
   background: rgb(29, 67, 235);
   color: rgb(228, 194, 3);
 }
-#cardFull{
+/* #cardFull{
   transform:scale(2);
  top:0px;
  z-index: 50;
-}
+} */
 .quest1{
   color: white;
 }

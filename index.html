@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link href="https://www.fontify.me/wf/cde5a23b5ef22ddcc65736840b4dfc13" rel="stylesheet" type="text/css">
   <meta charset="UTF-8">
@@ -19,97 +20,98 @@
   </header>
 
   <main id='mainEl'>
-    <div id = 'fullscreen'>
-    <div class='category1'>
-      <div class='card' id = ''>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $100 </h2>
+    <div id='fullscreen'>
+      <div class='category1'>
+        <div class='card' id=''>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $100 </h2>
 
+            </div>
+            <div class='card-back quest1'>
+            </div>
           </div>
-          <div class='card-back quest1'>Question</div>
+        </div>
+
+        <div class='card' id=''>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $200 </h2>
+            </div>
+            <div class='card-back quest2'></div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $300 </h2>
+            </div>
+            <div class='card-back quest3'></div>
+          </div>
         </div>
       </div>
 
-      <div class='card' id = ''>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $200 </h2>
+      <div class='category2'>
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $100 </h2>
+            </div>
+            <div class='card-back quest1'> </div>
           </div>
-          <div class='card-back quest2'>Question</div>
+        </div>
+
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $200 </h2>
+            </div>
+            <div class='card-back quest2'> </div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $300 </h2>
+            </div>
+            <div class='card-back quest3'> </div>
+          </div>
         </div>
       </div>
 
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $300 </h2>
+      <div class='category3'>
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $100 </h2>
+            </div>
+            <div class='card-back quest1'> </div>
           </div>
-          <div class='card-back quest3'>Question</div>
+        </div>
+
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $200 </h2>
+            </div>
+            <div class='card-back quest2'> </div>
+          </div>
+        </div>
+
+        <div class='card'>
+          <div class="row">
+            <div class='card-front'>
+              <h2> $300 </h2>
+            </div>
+            <div class='card-back quest3'> </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class='category2'>
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $100 </h2>
-          </div>
-          <div class='card-back quest1'>Question </div>
-        </div>
-      </div>
-
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $200 </h2>
-          </div>
-          <div class='card-back quest2'>Question </div>
-        </div>
-      </div>
-
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $300 </h2>
-          </div>
-          <div class='card-back quest3'>Question </div>
-        </div>
-      </div>
-    </div>
-
-    <div class='category3'>
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $100 </h2>
-          </div>
-          <div class='card-back quest1'>Question </div>
-        </div>
-      </div>
-
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $200 </h2>
-          </div>
-          <div class='card-back quest2'>Question </div>
-        </div>
-      </div>
-
-      <div class='card'>
-        <div class="row">
-          <div class='card-front'>
-            <h2> $300 </h2>
-          </div>
-          <div class='card-back quest3'>Question </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-      <div id="overlay">Welcome to Jeopardy! <br> <br> Click to play!</div>
+    <div id="overlay">Welcome to Jeopardy! <br> <br> Click to play!</div>
 
 
   </main>
@@ -118,15 +120,15 @@
 
   </footer>
   <script>
-    document.getElementById('overlay').addEventListener('click', function(){
+    document.getElementById('overlay').addEventListener('click', function () {
       document.getElementById('overlay').style.display = 'none'
     });
-    </script>
-    <script>
-    document.getElementById('fullscreen').addEventListener('click', function(){
-     
-     console.log(event.target); 
-     event.target.class = 'cardFull';
+  </script>
+  <script>
+    document.getElementById('fullscreen').addEventListener('click', function () {
+
+      console.log(event.target);
+      event.target.class = 'cardFull';
     });
   </script>
 

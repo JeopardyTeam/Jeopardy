@@ -112,8 +112,10 @@
       </div>
     </div>
 
-    <div id="overlay">Welcome to Jeopardy! <br> <br> Click to play!</div>
-
+    <div id="overlay">Welcome to Jeopardy! <br>
+      <input type="text" required="required" placeholder="Username...">
+      <button id="button">Play</button>
+      <br> Click to play!</div>
 
   </main>
 
@@ -122,7 +124,8 @@
   </footer>
   <script src='app.js'></script>
   <script>
-    document.getElementById('overlay').addEventListener('click', function () {
+
+    document.getElementById('button').addEventListener('click', function () {
       document.getElementById('overlay').style.display = 'none'
     });
     </script>

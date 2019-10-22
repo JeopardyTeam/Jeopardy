@@ -51,18 +51,10 @@ h2:hover{
 } */
 
 #newid{
-<<<<<<< HEAD
-
   transform: rotatey(180deg) scale(4);
-<<<<<<< HEAD
-}
-=======
   color:rgba(0, 128, 0, 0);
   top:pageTop;
   left:pageLeft;
-
-  
-=======
   -webkit-transition: 3s;
   transform: rotateY(180deg) scale(1);
   position: fixed;
@@ -73,7 +65,23 @@ h2:hover{
   /* margin-top: -50px;
   margin-left: 100px; */
   /* height: 55%; */
->>>>>>> 2247801cf0a0fb47d4c6e6d3d43047c79329099d
+
+  transform: rotatey(180deg) scale(4);
+  color:rgba(0, 128, 0, 0);
+  top:pageTop;
+  left:pageLeft;
+
+ 
+  -webkit-transition: 3s;
+  transform: rotateY(180deg) scale(1);
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 98%;
+  height: 98%;
+  /* margin-top: -50px;
+  margin-left: 100px; */
+  /* height: 55%; */
 }
 
 p #quest{
@@ -83,11 +91,9 @@ p #quest{
 #questClick{
   color:black;
 }
-<<<<<<< HEAD
->>>>>>> fa56a0cc9f8c415388dea05883c2759502b2fdff
-=======
 
 #overlay{
+  font-family: font79357;
   position: fixed;
   top: 0;
   left: -20px;
@@ -98,4 +104,3 @@ p #quest{
   color: black;
   background-color: lightblue;
 }
->>>>>>> 2247801cf0a0fb47d4c6e6d3d43047c79329099d

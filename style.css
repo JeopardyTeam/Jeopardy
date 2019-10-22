@@ -49,7 +49,9 @@ h2:hover{
   -webkit-transform: rotate(180deg);
    -ms-transform: rotate(180deg);
 } */
+
 #newid{
+
   transform: rotatey(180deg) scale(4);
   color:rgba(0, 128, 0, 0);
   top:pageTop;
@@ -64,4 +66,5 @@ p #quest{
 #questClick{
   color:black;
   
+
 }

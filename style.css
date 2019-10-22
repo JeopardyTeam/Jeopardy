@@ -148,8 +148,23 @@
     margin-left: 50px;
     margin-top: 30px;
     text-align: center;
-=======
+}
 #newid{
+  transform: rotatey(180deg) scale(4);
+  color:rgba(0, 128, 0, 0);
+  top:pageTop;
+  left:pageLeft;
+  -webkit-transition: 3s;
+  transform: rotateY(180deg) scale(1);
+  position: fixed;
+  top: 0;
+  left: -20px;
+  width: 98%;
+  height: 98%;
+  /* margin-top: -50px;
+  margin-left: 100px; */
+  /* height: 55%; */
+
   transform: rotatey(180deg) scale(4);
   color:rgba(0, 128, 0, 0);
   top:pageTop;
@@ -166,7 +181,6 @@
   /* margin-top: -50px;
   margin-left: 100px; */
   /* height: 55%; */
-
 }
 
 p #quest{
@@ -178,6 +192,7 @@ p #quest{
 }
 
 #overlay{
+  font-family: font79357;
   position: fixed;
   top: 0;
   left: -20px;
@@ -187,6 +202,4 @@ p #quest{
   font-size: 150px;
   color: black;
   background-color: lightblue;
-
 }
- 

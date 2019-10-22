@@ -46,7 +46,21 @@ nav{
   border: 2px solid black;
   font-family: font79357;
  }
- 
+ #rightAnswer, #wrongAnswer {
+   padding: 5px;
+   color: white;
+   text-transform: uppercase;
+   font-size: 14px;
+ }
+ #rightAnswer {
+   background-color: green;
+   margin-right: 5px;
+   border: none;
+ }
+ #wrongAnswer {
+   background-color: red;
+   border: none;
+ }
 .row {
   position: relative;
   width: 100%;

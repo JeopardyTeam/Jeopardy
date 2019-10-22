@@ -5,7 +5,8 @@ html {
 }
 h2 {
   text-decoration: underline;
-  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-family: 'Korinna-Regular';
 
 }
 nav {

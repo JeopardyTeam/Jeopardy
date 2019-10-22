@@ -52,20 +52,18 @@
 
 
 
-  /* #newid{
-     -webkit-transition: 1s; 
-    transform: rotateY(180deg) scale(1);
+  #newid{
     transition: 3s;
     position: fixed;
     top: 0;
-    left: -20px;
+    left: -0px;
     width: 98%;
     height: 98%;
      color:rgba(0, 128, 0, 0); 
      margin-top: -50px;
     margin-left: 100px; 
-    height: 55%;
-   } */
+   
+   }
    
   
 
@@ -78,6 +76,21 @@
   
 
 } */
+.category1{
+  display:inline-block;
+  position:relative;
+  width:300px;
+}
+.category2{
+  display:inline-block;
+  position:relative;
+  width:300px;
+}
+.category3{
+  display:inline-block;
+  position:relative;
+  width:300px;
+}
 .card {
    
   background-color: transparent;
@@ -96,9 +109,10 @@
    }
  
    .card:hover .row {
-     transform: scale(1.0);
+     z-index: 100;
+     transform: scale(1);
      transition-duration: 1s;
-     transform: rotatey(180deg) scale(2);
+     transform: rotatey(180deg) scale(1.7);
      background-color: rgb(29, 67, 235);
      color: rgb(228, 194, 3);
      width: 300px;

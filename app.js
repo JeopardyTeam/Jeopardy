@@ -3,11 +3,8 @@
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
-var btn = document.createElement('button');
-btn.textContent = 'Correct';
-
-
-
+// var btn = document.createElement('button');
+// btn.textContent = 'Correct';
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -41,6 +38,7 @@ new Medium('This property allows you to take an element in normal flow and place
 new Hard('This term is used for a function that is associated with (or, attached to) an object', 'method', 300);
 new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
+var userPoints = 0;
 
 function one() {
   for (var i = 0; i < Easy.length; i++) {
@@ -53,12 +51,20 @@ function one() {
     oneHundQuest.appendChild(btn);
     oneHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
+    console.log(allOneHundred[i].pointValue);
+    // btn.onclick = function myScore() {
+    //   userPoints = `${allOneHundred[i].pointValue}`;
+    //   console.log(allOneHundred[i].pointValue);
+    // };
+    btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
+    wrong.setAttribute('id', 'wrongAnswer');
   }
 }
 one();
 
 function two() {
+
   for (var j = 0; j < Medium.length; j++) {
     var twoHundQuest = document.getElementsByClassName('quest2')[j];
     var secondQuestion = document.createElement('p');
@@ -69,10 +75,14 @@ function two() {
     twoHundQuest.appendChild(btn);
     twoHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
+    btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
+    wrong.setAttribute('id', 'wrongAnswer');
   }
 }
 two();
+
+
 
 function three() {
   for (var k = 0; k < Hard.length; k++) {
@@ -85,7 +95,9 @@ function three() {
     threeHundQuest.appendChild(btn);
     threeHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
+    btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
+    wrong.setAttribute('id', 'wrongAnswer');
   }
 }
 three();
@@ -95,4 +107,13 @@ var overlay = document.getElementById('overlay').addEventListener('click', off);
 function off() {
   document.getElementById('overlay').style.display = 'none';
 }
+//Saving user scores
+User.allUsers = [];
+
+function User(name, score) {
+  this.name = name;
+  this.score = score;
+  User.allUsers.push(this);
+}
+
 

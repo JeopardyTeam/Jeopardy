@@ -51,6 +51,12 @@ h2:hover{
 } */
 
 #newid{
+  transform: rotatey(180deg) scale(4);
+  color:rgba(0, 128, 0, 0);
+  top:pageTop;
+  left:pageLeft;
+
+ 
   -webkit-transition: 3s;
   transform: rotateY(180deg) scale(1);
   position: fixed;
@@ -61,6 +67,7 @@ h2:hover{
   /* margin-top: -50px;
   margin-left: 100px; */
   /* height: 55%; */
+
 }
 
 p #quest{

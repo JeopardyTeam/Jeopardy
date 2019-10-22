@@ -26,20 +26,18 @@ function Hard(question, answer, pointValue){
   allThreeHundred.push(this);
 }
 
-
-
 // Questions
-new Easy('Easy Question?', 'maybe', 100);
-new Easy('Easy Question 2?', 'maybe 2', 100);
-new Easy('Easy Question 3?', 'maybe 3', 100);
+new Easy('This tag is needed to run Javascript in an HTML file.', '<script>', 100);
+new Easy('DOM stands for?', 'Document Object Model', 100);
+new Easy('This selector allows you to target every element in a web page', 'maybe 3', 100);
 
-new Medium('Medium Question?', 'maybe', 200);
-new Medium('Medium Question 2?', 'maybe 2', 200);
-new Medium('Medium Question 3?', 'maybe 3', 200);
+new Medium('In JavaScript, this operator is used to assign a valie to a variable.', 'equals(=)', 200);
+new Medium(' HTML attributes and CSS declarations are examples of _____-_____ pairs.', 'key-value', 200);
+new Medium('This property allows you to take an element in normal flow and place it as far to the left or the right of the containing element as possible', 'float', 200);
 
-new Hard('Hard Question?', 'maybe', 300);
-new Hard('Hard Question 2?', 'maybe 2', 300);
-new Hard('Hard Question 3?', 'maybe 3', 300);
+new Hard('This term is used for a function that is associated with (or, attached to) an object', 'method', 300);
+new Hard('This tag is used to create a numbered list.', '<ol>', 300);
+new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 
 function one(){
   for (var i = 0; i < Easy.length; i++){

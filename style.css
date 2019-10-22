@@ -1,3 +1,17 @@
+html {
+  background: rgb(29, 67, 235);
+}
+
+
+#highScores, #aboutUs {
+  font-family: font79357;
+  text-align: center;
+  color: rgb(228, 194, 3);
+  font-size:  30px;
+  margin-left: 350px;
+  margin-right:40px;
+}
+
 .row{
   display: inline-block;
   align-content: center;

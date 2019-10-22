@@ -1,14 +1,18 @@
 html {
   background: rgb(29, 67, 235);
 }
+nav{
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
 
 #home, #aboutUs {
   font-family: font79357;
   text-align: center;
   color: rgb(228, 194, 3);
   font-size:  30px;
-  margin-left: 350px;
-  margin-right:40px;
+  padding: 30px;
 }
 
 h2 {
@@ -31,5 +35,12 @@ main {
   margin: 0 auto;
   font-size: 30px;
   text-align: center;
+}
+footer {
+  text-align: center;
+  color: rgb(228, 194, 3);
+  font-family: font79357;
+  bottom: 0;
+  position: fixed;
 }
 

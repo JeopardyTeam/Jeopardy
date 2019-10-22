@@ -6,13 +6,18 @@ body {
   font-family: font79357;
 }
 
+nav{
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+
 #highScores, #aboutUs {
   font-family: font79357;
   text-align: center;
   color: rgb(228, 194, 3);
   font-size:  30px;
-  margin-left: 350px;
-  margin-right:40px;
+  padding: 30px;
 }
    
 .category1{
@@ -87,9 +92,7 @@ body {
   font-family: font79357;
   font-size: 30px;
   width: 1350px;
-  height: 650px;
-  margin-left: 50px;
-  margin-top: 30px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -132,4 +135,9 @@ p #quest{
 
 .quest3{
   color: white;
+}
+footer {
+  text-align: center;
+  color: rgb(228, 194, 3);
+  font-family: font79357;
 }

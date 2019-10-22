@@ -6,6 +6,11 @@ body {
   font-family: font79357;
 }
 
+header {
+  width: 100%;
+  text-align: center;
+}
+
 nav{
   margin: 0 auto;
   text-align: center;

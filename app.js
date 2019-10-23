@@ -38,6 +38,7 @@ new Hard('This term is used for a function that is associated with (or, attached
 new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 var userPoints = [];
+myFunction();
 
 
 
@@ -147,9 +148,11 @@ function handleSubmit(event) {
   document.getElementById('overlay').style.transition = '2s';
   fade();
   document.getElementById('overlay').style.visibility = 'hidden';
-  
+  document.getElementById('namedata').textContent = `Username: ${userName}`;
+
+
 }
-function fade() {  
+function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
 //add new game button
@@ -160,6 +163,7 @@ function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction(item) {
-  console.log(userPoints.reduce(getSum, 0));
+  var score =(userPoints.reduce(getSum, 0));
+  document.getElementById('scoredata').textContent =`Score: ${score}`;
+ 
 }
-

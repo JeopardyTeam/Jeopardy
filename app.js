@@ -160,11 +160,11 @@ function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction() {
-  var totalScore = (userPoints.reduce(getSum, 0));
-  var namescore = document.getElementById('scoreRow');
-  var user = document.createElement('h2');
-  user.textContent = `${this.userName}`;
-  namescore.appendChild(user);
+  console.log(userPoints.reduce(getSum, 0));
+  // var namescore = document.getElementById('scoreRow');
+  // var user = document.createElement('h2');
+  // user.textContent = `${this.userName}`;
+  // namescore.appendChild(user);
 
 
   

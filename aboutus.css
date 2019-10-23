@@ -2,11 +2,17 @@ html {
     background: rgb(29, 67, 235);
 }
 
-nav{
+header {
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px black;
+  }
+
+nav {
     margin: 0 auto;
     text-align: center;
     padding: 30px;
-  }
+}
 
 #nav, #nav2 {
     position: center;
@@ -17,6 +23,13 @@ nav{
     font-family: font79357;
 }
 
+#nav:hover{
+  color: aliceblue;
+}
+
+#nav2:hover{
+  color: aliceblue;
+}
 
 main {
     font-family: font79357;
@@ -25,12 +38,13 @@ main {
     height: 650px;
     margin: 0 auto;
     text-align: center;
+    text-shadow: 2px 2px black;
 }
 
 #namerow {
     display: inline-block;
     align-content: center;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 60px;
 }
 
@@ -46,13 +60,15 @@ p {
   border: 2px solid black;
   margin-bottom: 50px;
   margin-left: 90px;
+  box-shadow: 2px 2px 20px black;
+
 }
 
 .nameCardInner {
     position: relative;
     width: 400px;
     height: 400px;
-    text-align: center;
+    text-align: center;e
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
@@ -60,13 +76,15 @@ p {
   .nameCard:hover .nameCardInner {
     transform: scale(1.0);
     transition-duration: 1s;
-    transform: rotatey(180deg) scale(2);
+    transform: rotatey(180deg) scale(1.7);
     background-color: transparent;
     color: rgb(228, 194, 3);
     width: 400px;
     height: 400px;
     border: 2px solid black;
     z-index: 10;
+    box-shadow: 5px 5px 20px black;
+
 }
 
 .nameCardFront, .nameCardBack {
@@ -88,52 +106,20 @@ p {
     transform: rotateY(180deg);
   }
 
+  .selfphoto {
+      margin: 10px 5px 5px 5px;
+      width: 145px;
+      height: 155px;
+  }
 
   footer {
     text-align: center;
     color: rgb(228, 194, 3);
     font-family: font79357;
+    bottom: 0px;
+    text-shadow: 2px 2px black;
   }
-/* #Jerica {
-    margin-top: 20px;
-    margin-left: 30px;
-    display: block;
-    width: 300px;
-    height: 250px;
-    border: 2px solid white;
-}
 
-#Jerica:hover {
-    background: rgb(29, 67, 235);
-    transform: scale(1.0);
-    transition-duration: 1s;
-    transform: rotatey(180deg) scale(2);
-   color: rgba(255, 255, 255, 0); */
-/* } */
-
-/* #Austin {
-    margin-top: 30px;
-    margin-left: 30px;
-    display: block;
-    width: 300px;
-    height: 250px;
-    border: 2px solid white;
-}
-
-#Krystal {
-    margin-top: 20px;
-    margin-left: 30px;
-    display: block;
-    width: 300px;
-    height: 250px;
-    border: 2px solid white;
-}
-
- #Terrell {
-    margin-top: 30px;
-    margin-left: 30px;
-    display: block;
-    width: 300px;
-    height: 250px;
-    border: 2px solid white;
- } */
+  footer p {
+      margin-top: 350px;
+  }

@@ -1,6 +1,13 @@
 html {
   background: rgb(29, 67, 235);
 }
+
+header {
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
 nav{
   margin: 0 auto;
   text-align: center;
@@ -15,10 +22,18 @@ nav{
   padding: 30px;
 }
 
+#home:hover{
+  color: aliceblue;
+}
+
+#aboutUs:hover{
+  color: aliceblue;
+}
+
 h2 {
   text-decoration: underline;
   font-family: font79357;
-
+  text-shadow: 2px 2px black;
 }
 
 body {
@@ -28,6 +43,7 @@ body {
 li {
   list-style-position: inside;
   font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px black;
 }
 
 main {
@@ -36,11 +52,16 @@ main {
   font-size: 30px;
   text-align: center;
 }
+
 footer {
   text-align: center;
   color: rgb(228, 194, 3);
   font-family: font79357;
-  bottom: 0;
-  position: fixed;
+  bottom: 0px;
+  text-shadow: 2px 2px black;
+}
+
+footer p {
+    margin-top: 350px;
 }
 

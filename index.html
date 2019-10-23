@@ -112,31 +112,31 @@
       </div>
     </div>
 
-    <div id="overlay">Welcome to Jeopardy! <br>
-      <input type="text" required="required" placeholder="Username...">
-      <button id="button">Play</button>
+  <div id="overlay">Welcome to Jeopardy! <br>
+    <form id="user-form">
+      <fieldset>
+        <input id="username" type="text" placeholder="Username..." required="required">
+        <button value="submit" id="button">Play</button>
+      </fieldset>
+    </form>
       <br> Click to play!</div>
 
   </main>
 
   <footer>
-    <p>&copy; 2019 Code 201-d53</p>
+    <p>Code 201-d53 &copy; 2019 </p>
   </footer>
+  <script src='app.js'></script>
   <script>
 
-    document.getElementById('button').addEventListener('click', function () {
-      document.getElementById('overlay').style.display = 'none'
-    });
-  </script>
-  <script>
     document.getElementById('fullscreen').addEventListener('click', function () {
-
       // console.log(event.target);
       event.target.class = 'cardFull';
     });
-  </script>
+    </script>
+ 
 
-  <script src='app.js'></script>
+  
 
 
 </body>

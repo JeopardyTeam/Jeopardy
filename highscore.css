@@ -1,6 +1,12 @@
 html {
   background: rgb(29, 67, 235);
 }
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
 nav{
   margin: 0 auto;
   text-align: center;
@@ -36,11 +42,15 @@ main {
   font-size: 30px;
   text-align: center;
 }
+
 footer {
   text-align: center;
   color: rgb(228, 194, 3);
   font-family: font79357;
-  bottom: 0;
-  position: fixed;
+  bottom: 0px;
+}
+
+footer p {
+    margin-top: 350px;
 }
 

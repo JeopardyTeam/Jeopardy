@@ -46,9 +46,10 @@ myFunction();
 
 function one() {
   for (var i = 0; i < Easy.length; i++) {
+
+    var btn = document.createElement('button');
     var oneHundQuest = document.getElementsByClassName('quest1')[i];
     var firstQuestion = document.createElement('p');
-    var btn = document.createElement('button');
     var wrong = document.createElement('button');
 
     firstQuestion.textContent = `${allOneHundred[i].question}`;
@@ -157,7 +158,7 @@ function User(name, score) {
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-themeAudio();
+themeAudio.play();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();

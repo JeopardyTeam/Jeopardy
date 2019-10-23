@@ -5,6 +5,7 @@ html {
 header {
   width: 100%;
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 nav{
@@ -21,10 +22,18 @@ nav{
   padding: 30px;
 }
 
+#home:hover{
+  color: aliceblue;
+}
+
+#aboutUs:hover{
+  color: aliceblue;
+}
+
 h2 {
   text-decoration: underline;
   font-family: font79357;
-
+  text-shadow: 2px 2px black;
 }
 
 body {
@@ -34,6 +43,7 @@ body {
 li {
   list-style-position: inside;
   font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px black;
 }
 
 main {
@@ -48,6 +58,7 @@ footer {
   color: rgb(228, 194, 3);
   font-family: font79357;
   bottom: 0px;
+  text-shadow: 2px 2px black;
 }
 
 footer p {

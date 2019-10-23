@@ -147,9 +147,9 @@ function handleSubmit(event) {
   document.getElementById('overlay').style.transition = '2s';
   fade();
   document.getElementById('overlay').style.visibility = 'hidden';
-  
+
 }
-function fade() {  
+function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
 //add new game button
@@ -159,7 +159,14 @@ function fade() {
 function getSum(total, num) {
   return total + Math.round(num);
 }
-function myFunction(item) {
-  console.log(userPoints.reduce(getSum, 0));
+function myFunction() {
+  var totalScore = (userPoints.reduce(getSum, 0));
+  var namescore = document.getElementById('scoreRow');
+  var user = document.createElement('h2');
+  user.textContent = `${this.userName}`;
+  namescore.appendChild(user);
+
+
+  
 }
 

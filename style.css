@@ -246,3 +246,25 @@ p{
 
   padding: 5px;
 }
+#data{
+  background-color: rgb(29, 67, 235);
+  width:100%;
+  height: 100%;
+}
+#namedata{
+  display:inline-block;
+  width:49%;
+  height: 100%;
+  background-color:rgb(29, 67, 235);
+  color:white;
+  font-size: 30pt;
+}
+#scoredata{
+  display:inline-block;
+  width:49%;
+  height: 100%;
+  background-color:rgb(29, 67, 235);
+  color:white;
+  font-size: 30pt;
+
+}

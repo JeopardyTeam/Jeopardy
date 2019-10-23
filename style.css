@@ -164,7 +164,7 @@ main {
 } */
 
 #overlay{
-  font-family: font79357;
+  font-family: 'gyparody';
   position: fixed;
   top: 0;
   left: -20px;
@@ -241,8 +241,14 @@ input {
 
 }
 
-p{
+p {
   text-shadow: 2px 2px black;
+}
+.scoreRow{
+  display:inline-block;
+  height:50%;
+  width:50%;
+
   padding: 5px;
 }
 .headingBox {
@@ -264,3 +270,27 @@ p{
   font-family: font79357;
   font-weight: 600;
  }
+
+#data{
+  background-color: rgb(29, 67, 235);
+  width:100%;
+  height: 100%;
+}
+#namedata{
+  display:inline-block;
+  width:49%;
+  height: 100%;
+  background-color:rgb(29, 67, 235);
+  color:white;
+  font-size: 30pt;
+}
+#scoredata{
+  display:inline-block;
+  width:49%;
+  height: 100%;
+  background-color:rgb(29, 67, 235);
+  color:white;
+  font-size: 30pt;
+
+}
+

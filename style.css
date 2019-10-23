@@ -44,38 +44,31 @@ a {
 .category1{
   display:inline-block;
   position:relative;
-  width:21%;
+  width:24%;
   text-shadow: 5px 5px black;
 }
 
 .category2{
   display:inline-block;
   position:relative;
-  width:21%;
+  width:24%;
   text-shadow: 5px 5px black;
 }
 
 .category3{
   display:inline-block;
   position:relative;
-  width:21%;
+  width:24%;
   text-shadow: 5px 5px black;
 }
 
-.card {
-  font-size: 2em;
-  background-color: transparent;
-  width: 300px;
-  height: 250px;
-  border: 4px solid black;
-  border-radius: 4px;
-  font-family: font79357;
- }
  #rightAnswer, #wrongAnswer {
    padding: 5px;
    color: white;
    text-transform: uppercase;
    font-size: 14px;
+   position: sticky;
+   margin-top: 15px;
  }
  #rightAnswer {
   background-color: green;
@@ -83,13 +76,16 @@ a {
   border: none;
   box-shadow: 5px 10px 20px black;
   text-shadow: 1px 1px black;
+  float: left;
+  margin: 10px 10px;
  }
  #wrongAnswer {
-   background-color: red;
-   border: none;
+  background-color: red;
+  border: none;
   box-shadow: 5px 10px 20px black;
-   text-shadow: 1px 1px black;
-
+  text-shadow: 1px 1px black;
+  float: right;
+  margin: 10px 10px;
  }
 .row {
   position: relative;
@@ -99,20 +95,31 @@ a {
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-.card:hover .row {
-  z-index: 100;
-  font-size: 25%;
-  font-family: font79357;
-  transform: scale(1);
-  transition-duration: 1s;
-  transform: rotatey(180deg) scale(1.7);
+#fullscreen {
+  background-color: black;
+}
+.card {
+  font-size: 2.0em;
   background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 2px solid black;
+  width: 280px;
+  height: 270px;
+  border: 15px solid black;
+  border-radius: 8px;
+  font-family: font79357;
+  font-weight: 600;
+ }
+.card:hover .row {
+  transition-delay:0.5s;
+  z-index: 100;
+  font-family: font79357;
+  transition-duration: 1s;
+  transform: rotateY(180deg) scale(3);
+  background-color: transparent;
+  margin: 0 auto;
+  width: 280px;
+  height: 270px; 
   box-shadow: 2px 2px 20px black;
   border-radius: 4px;
-
  }
  
 .card-front, .card-back {
@@ -135,7 +142,7 @@ a {
   font-size: 20px;
 }
 
-  main {
+main {
   font-family: font79357;
   font-size: 30px;
   width: 1350px;
@@ -231,4 +238,5 @@ input {
 
 p{
   text-shadow: 2px 2px black;
+  padding: 5px;
 }

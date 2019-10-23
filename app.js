@@ -157,7 +157,7 @@ function User(name, score) {
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-
+themeAudio();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();
@@ -167,14 +167,14 @@ function handleSubmit(event) {
   userForm.reset();
   document.getElementById('overlay').style.transition = '2s';
   fade();
+  themeAudio.play();
   document.getElementById('overlay').style.visibility = 'hidden';
   document.getElementById('namedata').textContent = `Username: ${userName}`;
-
-
 }
 function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
+
 //add new game button
 //add a game over screen with user score then link to leaderboard page
 
@@ -183,7 +183,7 @@ function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction(item) {
-  var score =(userPoints.reduce(getSum, 0));
-  document.getElementById('scoredata').textContent =`Score: ${score}`;
- 
+  var score = (userPoints.reduce(getSum, 0));
+  document.getElementById('scoredata').textContent = `Score: ${score}`;
+
 }

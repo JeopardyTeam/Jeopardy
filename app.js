@@ -57,11 +57,13 @@ function one() {
     console.log(userPoints);
     btn.onclick = function myScore() {
       userPoints.push(100);
+      myFunction();
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
       userPoints.push(-100);
+      myFunction();
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -83,11 +85,13 @@ function two() {
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
       userPoints.push(200);
+      myFunction();
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
       userPoints.push(-200);
+      myFunction();
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -108,11 +112,13 @@ function three() {
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
       userPoints.push(300);
+      myFunction();
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
       userPoints.push(-300);
+      myFunction();
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -155,3 +161,4 @@ function getSum(total, num) {
 function myFunction(item) {
   console.log(userPoints.reduce(getSum, 0));
 }
+

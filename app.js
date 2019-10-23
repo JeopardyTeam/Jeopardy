@@ -3,8 +3,7 @@
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
-// var btn = document.createElement('button');
-// btn.textContent = 'Correct';
+
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -25,7 +24,7 @@ function Hard(question, answer, pointValue) {
   this.pointValue = pointValue;
   allThreeHundred.push(this);
 }
-
+//add more questions
 // Questions
 new Easy('This tag is needed to run Javascript in an HTML file.', '<script>', 100);
 new Easy('DOM stands for?', 'Document Object Model', 100);
@@ -158,21 +157,24 @@ function handleSubmit(event) {
   event.preventDefault();
   var userName = event.target.username.value;
   console.log(userName);
-
-  if(userName === 'null' ) {
-    alert('Do the thing!');
-
-  } else {
-
-    new User(userName, 0);
-    console.log(userName);
-    document.getElementById('overlay').style.display = 'none';
-  }
-
+  new User(userName, 0);
+  userForm.reset();
+  document.getElementById('overlay').style.transition = '2s';
+  fade();
+  document.getElementById('overlay').style.visibility = 'hidden';
+  
 }
+function fade() {  
+  document.getElementById('overlay').style.opacity = '0';
+}
+//add new game button
+//add a game over screen with user score then link to leaderboard page
+
+
 function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction(item) {
   console.log(userPoints.reduce(getSum, 0));
 }
+

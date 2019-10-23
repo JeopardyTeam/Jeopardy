@@ -12,6 +12,13 @@ header {
   text-align: center;
 }
 
+#logo {
+  font-size: 150px;
+  font-family: 'gyparody';
+  color: rgb(228, 194, 3);
+  text-shadow: 5px 5px black;
+}
+
 nav {
   margin: 0 auto;
   text-align: center;
@@ -293,4 +300,5 @@ p {
   font-size: 30pt;
 
 }
+
 

@@ -65,7 +65,6 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
-
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
@@ -73,7 +72,6 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
-
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -184,3 +182,4 @@ function myFunction(item) {
   document.getElementById('scoredata').textContent = `Score: ${score}`;
 
 }
+

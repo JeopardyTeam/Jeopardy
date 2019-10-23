@@ -102,11 +102,11 @@ function three() {
 }
 three();
 
-var overlay = document.getElementById('overlay').addEventListener('click', off);
+// var overlay = document.getElementById('overlay').addEventListener('click', off);
 
-function off() {
-  document.getElementById('overlay').style.display = 'none';
-}
+// function off() {
+//   document.getElementById('overlay').style.display = 'none';
+// }
 //Saving user scores
 User.allUsers = [];
 

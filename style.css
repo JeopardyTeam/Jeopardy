@@ -160,3 +160,33 @@ footer {
   color: rgb(228, 194, 3);
   font-family: font79357;
 }
+
+input{
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  background-color: lightslategrey;
+  border: 5px solid black;
+  padding: 10px;
+}
+
+#button{
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  background-color: lightslategray;
+  font-size: 16px;
+}
+
+#button:hover{
+  background-color: darkslategrey;
+  font-size: 20px;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+::placeholder{
+  color: black;
+}

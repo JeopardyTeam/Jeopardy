@@ -4,11 +4,14 @@ html {
 
 body {
   font-family: font79357;
+  text-shadow: 5px 5px black;
 }
 
 header {
   width: 100%;
   text-align: center;
+  text-shadow: 2px 2px black;
+
 }
 
 nav{
@@ -23,6 +26,14 @@ nav{
   color: rgb(228, 194, 3);
   font-size:  30px;
   padding: 30px;
+}
+
+#highScores:hover{
+  color: aliceblue;
+}
+
+#aboutUs:hover{
+  color: aliceblue;
 }
    
 .category1{
@@ -61,10 +72,15 @@ nav{
    background-color: green;
    margin-right: 5px;
    border: none;
+  box-shadow: 5px 10px 20px black;
+   text-shadow: 1px 1px black;
  }
  #wrongAnswer {
    background-color: red;
    border: none;
+  box-shadow: 5px 10px 20px black;
+   text-shadow: 1px 1px black;
+
  }
 .row {
   position: relative;
@@ -85,6 +101,8 @@ nav{
   width: 300px;
   height: 200px;
   border: 2px solid black;
+  box-shadow: 2px 2px 20px black;
+
  }
  
 .card-front, .card-back {
@@ -115,14 +133,14 @@ nav{
   text-align: center;
 }
 
-p #quest{
+/* p #quest{
   color:rgba(red, rgba(0, 128, 0, 0), blue, alpha);
   font-size: 20pt;
 }
 
 #questClick{
   color:black;
-}
+} */
 
 #overlay{
   font-family: font79357;
@@ -136,14 +154,13 @@ p #quest{
   color: black;
   background: rgb(29, 67, 235);
   color: rgb(228, 194, 3);
+  text-shadow: 5px 5px black;
 }
-
-.cardFull{
-  width:150%;
-  height:50%;
-  position: fixed;
-}
-
+/* #cardFull{
+  transform:scale(2);
+ top:0px;
+ z-index: 50;
+} */
 .quest1{
   color: white;
 }
@@ -168,6 +185,7 @@ input {
   width: 300px;
   height: 100px;
   font-size: 24px;
+  text-shadow: 3px 3px black;
   background-color: lightslategrey;
   border: 5px solid black;
   padding: 10px;
@@ -193,6 +211,11 @@ input {
   cursor: pointer;
 }
 
-::placeholder{
+placeholder{
   color: black;
+
+}
+
+p{
+  text-shadow: 2px 2px black;
 }

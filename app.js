@@ -100,6 +100,7 @@ function three() {
   }
 }
 three();
+
 //Saving user scores
 User.allUsers = [];
 

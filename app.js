@@ -83,7 +83,6 @@ function two() {
 two();
 
 
-
 function three() {
   for (var k = 0; k < Hard.length; k++) {
     var threeHundQuest = document.getElementsByClassName('quest3')[k];
@@ -102,11 +101,6 @@ function three() {
 }
 three();
 
-// var overlay = document.getElementById('overlay').addEventListener('click', off);
-
-// function off() {
-//   document.getElementById('overlay').style.display = 'none';
-// }
 //Saving user scores
 User.allUsers = [];
 
@@ -116,4 +110,23 @@ function User(name, score) {
   User.allUsers.push(this);
 }
 
+var userForm = document.getElementById('user-form');
+userForm.addEventListener('submit', handleSubmit);
 
+//input validation for username
+function handleSubmit(event) {
+  event.preventDefault();
+  var userName = event.target.username.value;
+  console.log(userName);
+
+  if(userName === 'null' ) {
+    alert('Do the thing!');
+  
+  } else {
+    
+    new User(userName, 0);
+    console.log(userName);
+    document.getElementById('overlay').style.display = 'none';
+  }
+  
+}

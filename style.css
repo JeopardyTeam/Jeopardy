@@ -115,14 +115,14 @@ nav{
   text-align: center;
 }
 
-p #quest{
+/* p #quest{
   color:rgba(red, rgba(0, 128, 0, 0), blue, alpha);
   font-size: 20pt;
 }
 
 #questClick{
   color:black;
-}
+} */
 
 #overlay{
   font-family: font79357;
@@ -137,13 +137,11 @@ p #quest{
   background: rgb(29, 67, 235);
   color: rgb(228, 194, 3);
 }
-
-.cardFull{
-  width:150%;
-  height:50%;
-  position: fixed;
-}
-
+/* #cardFull{
+  transform:scale(2);
+ top:0px;
+ z-index: 50;
+} */
 .quest1{
   color: white;
 }

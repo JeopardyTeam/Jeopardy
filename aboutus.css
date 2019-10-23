@@ -57,7 +57,7 @@ p {
     position: relative;
     width: 400px;
     height: 400px;
-    text-align: center;
+    text-align: center;e
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }

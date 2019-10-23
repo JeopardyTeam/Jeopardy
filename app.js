@@ -38,7 +38,9 @@ new Medium('This property allows you to take an element in normal flow and place
 new Hard('This term is used for a function that is associated with (or, attached to) an object', 'method', 300);
 new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
-var userPoints = 0;
+var userPoints = [];
+
+
 
 function one() {
   for (var i = 0; i < Easy.length; i++) {
@@ -46,19 +48,25 @@ function one() {
     var firstQuestion = document.createElement('p');
     var btn = document.createElement('button');
     var wrong = document.createElement('button');
+
     firstQuestion.textContent = `${allOneHundred[i].question}`;
     oneHundQuest.appendChild(firstQuestion);
     oneHundQuest.appendChild(btn);
     oneHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
-    console.log(allOneHundred[i].pointValue);
-    // btn.onclick = function myScore() {
-    //   userPoints = `${allOneHundred[i].pointValue}`;
-    //   console.log(allOneHundred[i].pointValue);
-    // };
+    console.log(userPoints);
+    btn.onclick = function myScore() {
+      userPoints.push(100);
+      myFunction();
+    };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
+    wrong.onclick = function myScore() {
+      userPoints.push(-100);
+      myFunction();
+    };
     wrong.setAttribute('id', 'wrongAnswer');
+
   }
 }
 one();
@@ -75,8 +83,16 @@ function two() {
     twoHundQuest.appendChild(btn);
     twoHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
+    btn.onclick = function myScore() {
+      userPoints.push(200);
+      myFunction();
+    };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
+    wrong.onclick = function myScore() {
+      userPoints.push(-200);
+      myFunction();
+    };
     wrong.setAttribute('id', 'wrongAnswer');
   }
 }
@@ -94,8 +110,16 @@ function three() {
     threeHundQuest.appendChild(btn);
     threeHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
+    btn.onclick = function myScore() {
+      userPoints.push(300);
+      myFunction();
+    };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
+    wrong.onclick = function myScore() {
+      userPoints.push(-300);
+      myFunction();
+    };
     wrong.setAttribute('id', 'wrongAnswer');
   }
 }
@@ -103,6 +127,7 @@ three();
 
 //Saving user scores
 User.allUsers = [];
+
 
 function User(name, score) {
   this.name = name;
@@ -121,12 +146,19 @@ function handleSubmit(event) {
 
   if(userName === 'null' ) {
     alert('Do the thing!');
-  
+
   } else {
-    
+
     new User(userName, 0);
     console.log(userName);
     document.getElementById('overlay').style.display = 'none';
   }
-  
+
 }
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+function myFunction(item) {
+  console.log(userPoints.reduce(getSum, 0));
+}
+

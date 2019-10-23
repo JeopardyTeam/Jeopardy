@@ -56,7 +56,7 @@ function one() {
     oneHundQuest.appendChild(btn);
     oneHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
-    console.log(userPoints);
+    // console.log(userPoints);
     btn.onclick = function myScore() {
       correctAudio.play();
       userPoints.push(100);

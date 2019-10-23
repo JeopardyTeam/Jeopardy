@@ -251,6 +251,7 @@ p{
   height: 100%;
   background-color:rgb(29, 67, 235);
   color:white;
+  font-size: 30pt;
 }
 #scoredata{
   display:inline-block;
@@ -258,5 +259,6 @@ p{
   height: 100%;
   background-color:rgb(29, 67, 235);
   color:white;
+  font-size: 30pt;
 
 }

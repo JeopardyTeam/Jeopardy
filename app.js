@@ -57,19 +57,13 @@ function one() {
     console.log(userPoints);
     btn.onclick = function myScore() {
       userPoints.push(100);
-<<<<<<< HEAD
       myFunction();
-=======
->>>>>>> 8f9764e570f541ff5c206ac8037675130abf54ac
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
       userPoints.push(-100);
-<<<<<<< HEAD
       myFunction();
-=======
->>>>>>> 8f9764e570f541ff5c206ac8037675130abf54ac
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -91,19 +85,13 @@ function two() {
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
       userPoints.push(200);
-<<<<<<< HEAD
       myFunction();
-=======
->>>>>>> 8f9764e570f541ff5c206ac8037675130abf54ac
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
       userPoints.push(-200);
-<<<<<<< HEAD
       myFunction();
-=======
->>>>>>> 8f9764e570f541ff5c206ac8037675130abf54ac
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -124,10 +112,7 @@ function three() {
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
       userPoints.push(300);
-<<<<<<< HEAD
       myFunction();
-=======
->>>>>>> 8f9764e570f541ff5c206ac8037675130abf54ac
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';

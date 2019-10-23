@@ -4,6 +4,10 @@ var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
 
+var correctAudio = new Audio('/audio/rightanswer.mp3');
+var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
+var themeAudio = new Audio('/audio/jeopardy.mp3');
+
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -39,8 +43,6 @@ new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 var userPoints = [];
 
-
-
 function one() {
   for (var i = 0; i < Easy.length; i++) {
     var oneHundQuest = document.getElementsByClassName('quest1')[i];
@@ -55,14 +57,20 @@ function one() {
     btn.textContent = 'Correct!';
     console.log(userPoints);
     btn.onclick = function myScore() {
+      correctAudio.play();
       userPoints.push(100);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
+      wrongAudio.play();
       userPoints.push(-100);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -83,14 +91,20 @@ function two() {
     twoHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
+      correctAudio.play();
       userPoints.push(200);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
+      wrongAudio.play();
       userPoints.push(-200);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -110,14 +124,20 @@ function three() {
     threeHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
+      correctAudio.play();
       userPoints.push(300);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
+      wrongAudio.play();
       userPoints.push(-300);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -147,9 +167,9 @@ function handleSubmit(event) {
   document.getElementById('overlay').style.transition = '2s';
   fade();
   document.getElementById('overlay').style.visibility = 'hidden';
-  
+  themeAudio.play();
 }
-function fade() {  
+function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
 //add new game button

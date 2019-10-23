@@ -160,7 +160,7 @@ main {
 } */
 
 #overlay{
-  font-family: font79357;
+  font-family: 'gyparody';
   position: fixed;
   top: 0;
   left: -20px;
@@ -236,7 +236,7 @@ input {
 
 }
 
-p{
+p {
   text-shadow: 2px 2px black;
 }
 .scoreRow{
@@ -246,6 +246,7 @@ p{
 
   padding: 5px;
 }
+<<<<<<< Updated upstream
 #data{
   background-color: rgb(29, 67, 235);
   width:100%;
@@ -268,3 +269,5 @@ p{
   font-size: 30pt;
 
 }
+=======
+>>>>>>> Stashed changes

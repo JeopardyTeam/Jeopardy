@@ -44,21 +44,23 @@ a {
 .category1{
   display:inline-block;
   position:relative;
-  width:24%;
   text-shadow: 5px 5px black;
 }
 
 .category2{
   display:inline-block;
   position:relative;
-  width:24%;
   text-shadow: 5px 5px black;
 }
 
 .category3 {
   display:inline-block;
   position:relative;
-  width:24%;
+  text-shadow: 5px 5px black;
+}
+.category4 {
+  display:inline-block;
+  position:relative;
   text-shadow: 5px 5px black;
 }
 
@@ -74,22 +76,24 @@ a {
   background-color: green;
   margin-right: 5px;
   border: none;
-  box-shadow: 5px 10px 20px black;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px black;
   float: left;
   margin: 10px 10px;
+  border-radius: 4px;
  }
  #wrongAnswer {
   background-color: red;
   border: none;
-  box-shadow: 5px 10px 20px black;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px black;
   float: right;
   margin: 10px 10px;
+  border-radius: 4px;
  }
 .row {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   text-align: center;
   transition: transform 1s;
@@ -103,7 +107,7 @@ a {
   background-color: transparent;
   width: 280px;
   height: 270px;
-  border: 15px solid black;
+  border: 12px solid black;
   border-radius: 8px;
   font-family: font79357;
   font-weight: 600;
@@ -113,11 +117,11 @@ a {
   z-index: 100;
   font-family: font79357;
   transition-duration: 1s;
-  transform: rotateY(180deg) scale(3);
+  transform: rotateY(180deg) scale(2.5);
   background-color: transparent;
-  margin: 0 auto;
-  width: 280px;
-  height: 270px; 
+  /* margin: 0 auto; */
+  /* width: 270px;
+  height: 270px;  */
   box-shadow: 2px 2px 20px black;
   border-radius: 4px;
  }
@@ -144,8 +148,8 @@ a {
 
 main {
   font-family: font79357;
-  font-size: 30px;
-  width: 1350px;
+  font-size: 2em;
+  width:1280px;
   margin: 0 auto;
   text-align: center;
 }
@@ -160,14 +164,14 @@ main {
 } */
 
 #overlay{
-  font-family: font79357;
+  font-family: 'gyparody';
   position: fixed;
   top: 0;
   left: -20px;
   width: 100%;
   height: 100%;
   text-align: center;
-  font-size: 150px;
+  font-size: 3em;
   color: black;
   background: rgb(29, 67, 235);
   color: rgb(228, 194, 3);
@@ -203,7 +207,7 @@ input {
   width: 300px;
   height: 100px;
   border-radius: 4px;
-  font-size: 24px;
+  font-size: 50%;
   background-color: lightslategrey;
   border: 5px solid black;
   padding: 10px;
@@ -232,11 +236,61 @@ input {
 }
 
 ::placeholder {
-  color: black;
+  color: #222;
+  font-size: 1em;
 
 }
 
-p{
+p {
   text-shadow: 2px 2px black;
+}
+.scoreRow{
+  display:inline-block;
+  height:50%;
+  width:50%;
+
   padding: 5px;
 }
+.headingBox {
+  /* font-size: 1em; */
+  padding: 10px;
+  /* vertical-align: middle; */
+}
+.card-front-header {
+  background-color: rgb(29, 67, 235);
+  color: rgb(228, 194, 3);
+  height: 100px;
+  width: 100%;
+}
+.categoryTop {
+  font-size: 24px;
+  height: 100%;
+  border: 12px solid black;
+  border-radius: 8px;
+  font-family: font79357;
+  font-weight: 600;
+ }
+
+#data{
+  background-color: rgb(29, 67, 235);
+  width:100%;
+  height: 100%;
+}
+#namedata{
+  display:inline-block;
+  width:49%;
+  height: 100%;
+  background-color:rgb(29, 67, 235);
+  color:white;
+  font-size: 30pt;
+}
+#scoredata{
+  display:inline-block;
+  width:49%;
+  height: 100%;
+  background-color:rgb(29, 67, 235);
+  color:white;
+  font-size: 30pt;
+
+}
+

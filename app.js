@@ -1,13 +1,15 @@
 'use strict';
-
+//Empty arrays for questions to be generated in.
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
 
+//Audio files used on intro and buttons.
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
 var themeAudio = new Audio('/audio/jeopardy.mp3');
 
+//Object literals for Easy, Medium, Hard questions.
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -44,6 +46,7 @@ new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 var userPoints = [];
 myFunction();
 
+//Three functions that assign questions, buttons, and audio functionability. As well as assigning the user points or subtracting points.
 function one() {
   for (var i = 0; i < Easy.length; i++) {
 
@@ -62,7 +65,6 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -71,7 +73,6 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -96,7 +97,6 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -105,7 +105,6 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -129,7 +128,6 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -138,7 +136,6 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -178,7 +175,6 @@ function fade() {
 
 //add new game button
 //add a game over screen with user score then link to leaderboard page
-
 
 function getSum(total, num) {
   return total + Math.round(num);

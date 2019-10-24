@@ -5,6 +5,10 @@ var allTwoHundred = [];
 var allThreeHundred = [];
 // var allRandom = [];
 
+var correctAudio = new Audio('/audio/rightanswer.mp3');
+var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
+var themeAudio = new Audio('/audio/jeopardy.mp3');
+
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -42,6 +46,8 @@ new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 new Hard('Who was the 25th President of the United States?', 'William McKinley', 300);
 var userPoints = [];
+myFunction();
+
 
 function one() {
   console.log(Easy.length);
@@ -58,14 +64,20 @@ function one() {
     btn.textContent = 'Correct!';
     // console.log(userPoints);
     btn.onclick = function myScore() {
+      correctAudio.play();
       userPoints.push(100);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
+      wrongAudio.play();
       userPoints.push(-100);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -85,14 +97,20 @@ function two() {
     twoHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
+      correctAudio.play();
       userPoints.push(200);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
+      wrongAudio.play();
       userPoints.push(-200);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -112,14 +130,20 @@ function three() {
     threeHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
+      correctAudio.play();
       userPoints.push(300);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
+      wrongAudio.play();
       userPoints.push(-300);
       myFunction();
+      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -139,7 +163,7 @@ function User(name, score) {
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-
+themeAudio();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();
@@ -148,13 +172,15 @@ function handleSubmit(event) {
   new User(userName, 0);
   userForm.reset();
   document.getElementById('overlay').style.transition = '2s';
-  // fade();
+  fade();
+  themeAudio.play();
   document.getElementById('overlay').style.visibility = 'hidden';
-  
+  document.getElementById('namedata').textContent = `Username: ${userName}`;
 }
-function fade() {  
+function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
+
 //add new game button
 //add a game over screen with user score then link to leaderboard page
 
@@ -163,6 +189,7 @@ function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction(item) {
-  console.log(userPoints.reduce(getSum, 0));
-}
+  var score = (userPoints.reduce(getSum, 0));
+  document.getElementById('scoredata').textContent = `Score: ${score}`;
 
+}

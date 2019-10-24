@@ -3,6 +3,7 @@
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
+// var allRandom = [];
 
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
@@ -33,24 +34,30 @@ function Hard(question, answer, pointValue) {
 new Easy('This tag is needed to run Javascript in an HTML file.', '<script>', 100);
 new Easy('DOM stands for?', 'Document Object Model', 100);
 new Easy('This selector allows you to target every element in a web page', 'maybe 3', 100);
+new Easy('What is the squareroot of 2704?', '52', 300);
 
 new Medium('In JavaScript, this operator is used to assign a value to a variable.', 'equals(=)', 200);
 new Medium(' HTML attributes and CSS declarations are examples of _____-_____ pairs.', 'key-value', 200);
 new Medium('This property allows you to take an element in normal flow and place it as far to the left or the right of the containing element as possible', 'float', 200);
+new Medium('Who lives in a pineapple under the sea?', 'SpongeBob Squarepants', 300);
 
 new Hard('This term is used for a function that is associated with (or, attached to) an object', 'method', 300);
 new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
+
+new Hard('Who was the 25th President of the United States?', 'William McKinley', 300);
 var userPoints = [];
 myFunction();
 
+
 function one() {
-  for (var i = 0; i < Easy.length; i++) {
+  console.log(Easy.length);
+  for (var i = 0; i < allOneHundred.length; i++) {
     var oneHundQuest = document.getElementsByClassName('quest1')[i];
     var firstQuestion = document.createElement('p');
     var btn = document.createElement('button');
     var wrong = document.createElement('button');
-
+    console.log(allOneHundred[i].question);
     firstQuestion.textContent = `${allOneHundred[i].question}`;
     oneHundQuest.appendChild(firstQuestion);
     oneHundQuest.appendChild(btn);
@@ -80,8 +87,7 @@ function one() {
 one();
 
 function two() {
-
-  for (var j = 0; j < Medium.length; j++) {
+  for (var j = 0; j < allTwoHundred.length; j++) {
     var twoHundQuest = document.getElementsByClassName('quest2')[j];
     var secondQuestion = document.createElement('p');
     var btn = document.createElement('button');
@@ -114,7 +120,7 @@ two();
 
 
 function three() {
-  for (var k = 0; k < Hard.length; k++) {
+  for (var k = 0; k < allThreeHundred.length; k++) {
     var threeHundQuest = document.getElementsByClassName('quest3')[k];
     var thirdQuestion = document.createElement('p');
     var btn = document.createElement('button');
@@ -144,6 +150,7 @@ function three() {
   }
 }
 three();
+
 
 //Saving user scores
 User.allUsers = [];

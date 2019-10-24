@@ -72,6 +72,7 @@ function one() {
       userPoints.push(100);
       myFunction();
       totalClicks++;
+      endscreen();
       event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
@@ -83,6 +84,7 @@ function one() {
       userPoints.push(-100);
       myFunction();
       totalClicks++;
+      endscreen();
       event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
@@ -110,6 +112,7 @@ function two() {
       userPoints.push(200);
       myFunction();
       totalClicks++;
+      endscreen();
       event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
@@ -121,6 +124,7 @@ function two() {
       userPoints.push(-200);
       myFunction();
       totalClicks++;
+      endscreen();
       event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
@@ -147,6 +151,7 @@ function three() {
       userPoints.push(300);
       myFunction();
       totalClicks++;
+      endscreen();
       event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
@@ -158,6 +163,7 @@ function three() {
       userPoints.push(-300);
       myFunction();
       totalClicks++;
+      endscreen();
       event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
@@ -207,9 +213,14 @@ function myFunction(item) {
   document.getElementById('scoredata').textContent =`Score: ${score}`;
 }
 function endscreen(){
-  if (totalClicks === 3){
-    alert('boom');
+  if (totalClicks === 12){
+    window.location.href='highscores.html';
   }
 
 }
-endscreen();
+function highscore() {
+  var score =(userPoints.reduce(getSum, 0));
+  document.getElementById('yourscore').innerHTML =`Score: ${score}`;
+}
+highscore();
+

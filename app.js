@@ -5,26 +5,12 @@ var allTwoHundred = [];
 var allThreeHundred = [];
 var totalClicks = 0;
 
-// //check local storage
-// if ('userData' in localStorage) {
-//   User.storedUsers = localStorage.getItem('userData');
-//   // console.log(User.storedUsers);
-//   User.parsedUsers = JSON.parse(User.storedUsers);
-//   // console.log(User.parsedUsers);
-//   for (var i = 0; i < User.parsedUsers.length; i++) {
-//     new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
-//     console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
-//   }
-//   console.log(User.parsedUsers);
-//   // renderUsers();
-// } else{
-//   handleSubmit();
-// }
+
 
 //Audio files used on intro and buttons.
-// var correctAudio = new Audio('/audio/rightanswer.mp3');
-// var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
-// var themeAudio = new Audio('/audio/jeopardy.mp3');
+var correctAudio = new Audio('/audio/rightanswer.mp3');
+var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
+var themeAudio = new Audio('/audio/jeopardy.mp3');
 
 //Object literals for Easy, Medium, Hard questions.
 function Easy(question, answer, pointValue) {
@@ -86,7 +72,7 @@ function one() {
     btn.textContent = 'Correct!';
     // console.log(userPoints);
     btn.onclick = function myScore() {
-      // correctAudio.play();
+      correctAudio.play();
       userPoints.push(100);
       myFunction();
       totalClicks++;
@@ -96,7 +82,7 @@ function one() {
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
-      // wrongAudio.play();
+      wrongAudio.play();
       userPoints.push(-100);
       myFunction();
       totalClicks++;
@@ -122,7 +108,7 @@ function two() {
     twoHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
-      // correctAudio.play();
+      correctAudio.play();
       userPoints.push(200);
       myFunction();
       totalClicks++;
@@ -132,7 +118,7 @@ function two() {
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
-      // wrongAudio.play();
+      wrongAudio.play();
       userPoints.push(-200);
       myFunction();
       totalClicks++;
@@ -157,7 +143,7 @@ function three() {
     threeHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
-      // correctAudio.play();
+      correctAudio.play();
       userPoints.push(300);
       myFunction();
       totalClicks++;
@@ -167,7 +153,7 @@ function three() {
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
-      // wrongAudio.play();
+      wrongAudio.play();
       userPoints.push(-300);
       myFunction();
       totalClicks++;
@@ -200,7 +186,7 @@ function handleSubmit(event) {
   userForm.reset();
   document.getElementById('overlay').style.transition = '2s';
   fade();
-  // themeAudio.play();
+  themeAudio.play();
   document.getElementById('overlay').style.visibility = 'hidden';
   document.getElementById('namedata').textContent = `Player: ${userName}`;
 }
@@ -223,8 +209,24 @@ function myFunction() {
   }
 }
 function endscreen(){
-  if (totalClicks === 2){
+  if (totalClicks === 12){
     console.log(User.allUsers);
+    //check local storage
+if ('userData' in localStorage) {
+  User.storedUsers = localStorage.getItem('userData');
+  // console.log(User.storedUsers);
+  User.parsedUsers = JSON.parse(User.storedUsers);
+  // console.log(User.parsedUsers);
+  for (var i = 0; i < User.parsedUsers.length; i++) {
+    new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
+    console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+  }
+  console.log(User.parsedUsers);
+  // renderUsers();
+} else{
+  handleSubmit();
+}
+
     var User_serialized = JSON.stringify(User.allUsers);
     localStorage.setItem('userData', User_serialized);
     window.location.href='highscores.html';

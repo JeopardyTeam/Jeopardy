@@ -1,13 +1,15 @@
 'use strict';
-
+//Empty arrays for questions to be generated in.
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
 
+//Audio files used on intro and buttons.
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
 var themeAudio = new Audio('/audio/jeopardy.mp3');
 
+//Object literals for Easy, Medium, Hard questions.
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -47,8 +49,11 @@ new Hard('Who was the 25th President of the United States?', 'William McKinley',
 var userPoints = [];
 myFunction();
 
+//Three functions that assign questions, buttons, and audio functionability. As well as assigning the user points or subtracting points.
 function one() {
+
   for (var i = 0; i < allOneHundred.length; i++) {
+
     var oneHundQuest = document.getElementsByClassName('quest1')[i];
     var firstQuestion = document.createElement('p');
     var btn = document.createElement('button');
@@ -64,8 +69,6 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
-
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
@@ -73,8 +76,6 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
-
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -98,7 +99,6 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -107,7 +107,6 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -131,7 +130,6 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -140,7 +138,6 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -160,7 +157,6 @@ function User(name, score) {
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-themeAudio();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();
@@ -181,7 +177,6 @@ function fade() {
 //add new game button
 //add a game over screen with user score then link to leaderboard page
 
-
 function getSum(total, num) {
   return total + Math.round(num);
 }
@@ -190,3 +185,4 @@ function myFunction(item) {
   document.getElementById('scoredata').textContent = `Score: ${score}`;
 
 }
+

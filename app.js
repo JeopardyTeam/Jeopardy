@@ -3,7 +3,6 @@
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
-
 var totalClick = 0;
 
 var correctAudio = new Audio('/audio/rightanswer.mp3');
@@ -208,11 +207,13 @@ function myFunction() {
   var score = (userPoints.reduce(getSum, 0));
   document.getElementById('scoredata').textContent = `Score: ${score}`;
 }
-function totalclick(){
-  if (totalClick > 2){
-    alert('balls');
+function endscreen(){
+
+
+if (totalClick === 2){
+  alert('balls');
   // var overlay2 = document.createElement('div');
   // overlay2.textContent = `Game Finished! Score: ${this.score}`;
-  }
 }
-totalclick();
+}
+endscreen();

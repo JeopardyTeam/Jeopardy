@@ -1,7 +1,6 @@
 html {
   background: rgb(29, 67, 235);
 }
-
 body {
   font-family: font79357;
   text-shadow: 5px 5px black;
@@ -10,6 +9,7 @@ body {
 header {
   width: 100%;
   text-align: center;
+  border-radius: 6px;
 }
 
 @font-face {
@@ -22,9 +22,16 @@ header {
   font-size: 150px;
   font-family: gyparody;
   color: rgb(228, 194, 3);
-  text-shadow: 5px 5px black;
+  /* background: -webkit-linear-gradient(#222, #eee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
+#greeting {
+  font-size: 14px;
+  font-family: font79357;
+  text-align: center;
+}
 nav {
   margin: 0 auto;
   text-align: center;
@@ -38,6 +45,7 @@ a {
 
 #highScores, #aboutUs {
   font-family: font79357;
+  text-transform: uppercase;
   text-align: center;
   color: rgb(228, 194, 3);
   border-radius: 4px;
@@ -87,7 +95,7 @@ a {
   background-color: green;
   margin-right: 5px;
   border: none;
-  box-shadow: 5px 10px 20px black;
+  box-shadow: 2px 2px 20px black;
   text-shadow: 1px 1px black;
   float: left;
   margin: 10px 10px;
@@ -95,7 +103,7 @@ a {
  #wrongAnswer {
   background-color: red;
   border: none;
-  box-shadow: 5px 10px 20px black;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px black;
   float: right;
   margin: 10px 10px;
@@ -110,23 +118,25 @@ a {
 }
 #fullscreen {
   background-color: black;
+  border-radius: 6px;
 }
 .card {
   font-size: 2.0em;
   background-color: transparent;
-  width: 280px;
   height: 270px;
-  border: 15px solid black;
-  border-radius: 8px;
+  border: 20px solid black;
+  border-radius: 6px;
   font-family: font79357;
   font-weight: 600;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+
  }
 .card:hover .row {
   transition-delay:0.5s;
   z-index: 100;
   font-family: font79357;
   transition-duration: 1s;
-  transform: rotateY(180deg) scale(3);
+  transform: rotateY(180deg) scale(2.5);
   background-color: transparent;
   margin: 0 auto;
   width: 280px;
@@ -142,6 +152,7 @@ a {
   height: 100%;
   backface-visibility: hidden;
   color: rgb(228, 194, 3);
+  border-radius: 6px;
 }
  
 .card-front {
@@ -173,7 +184,6 @@ main {
   color:black;
 } */
 
-
 #overlay{
   font-family: gyparody;
   position: fixed;
@@ -188,6 +198,10 @@ main {
   color: rgb(228, 194, 3);
   text-shadow: 5px 5px black;
   transition: 2s;
+}
+#overlay h2 {
+  margin-bottom: 0px;
+  margin-top: 50px;
 }
 /* #cardFull{
   transform:scale(2);
@@ -219,7 +233,7 @@ footer {
 input {
   width: 300px;
   height: 100px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 24px;
   background-color: lightslategrey;
   border: 5px solid black;
@@ -254,7 +268,8 @@ input {
 }
 
 p {
-  text-shadow: 2px 2px black;
+  text-transform: uppercase;
+  text-shadow: 3px 2px 3px rgba(0,0,0,0.4);
 }
 
 .scoreRow{
@@ -274,28 +289,31 @@ p {
   display:inline-block;
   width:49%;
   height: 100%;
-  background-color:rgb(29, 67, 235);
+  color: rgb(228, 194, 3);
   color:white;
   font-size: 30pt;
+  text-shadow: 3px 2px 3px rgba(0,0,0,0.4);
 }
 
 #scoredata{
   display:inline-block;
+  text-shadow: 3px 2px 3px rgba(0,0,0,0.4);
+  color: rgb(228, 194, 3);
   width:49%;
   height: 100%;
-  background-color:rgb(29, 67, 235);
   color:white;
   font-size: 30pt;
 }
 
 .headingBox {
-  /* font-size: 1em; */
+  line-height: 80px;
   padding: 10px;
-  /* vertical-align: middle; */
+  text-shadow: 2px 2px black;
 }
 
 .card-front-header {
   background-color: rgb(29, 67, 235);
+  border-radius: 6px;
   color: rgb(228, 194, 3);
   height: 100px;
   width: 100%;
@@ -303,9 +321,11 @@ p {
 
 .categoryTop {
   font-size: 24px;
-  height: 100%;
-  border: 12px solid black;
+  height: 80%;
+  border: 18px solid black;
+  text-shadow: 2px 2px black;
   border-radius: 8px;
   font-family: font79357;
   font-weight: 600;
+  margin-bottom: 25px;
  }

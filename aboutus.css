@@ -1,5 +1,5 @@
 html {
-    background: rgb(29, 67, 235);
+  background: rgb(29, 67, 235);
 }
 
 @font-face {
@@ -15,25 +15,24 @@ html {
 }
 
 a {
-    text-decoration: none;
-    text-shadow: none;
-    border: 2px solid black;
-    font-family: font79357;
-    text-align: center;
-    color: rgb(228, 194, 3);
-    border-radius: 4px;
-    font-size:  24px;
-    padding: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-   }
+  text-decoration: none;
+  text-shadow: none;
+  border: 2px solid black;
+  font-family: font79357;
+  text-align: center;
+  color: rgb(228, 194, 3);
+  border-radius: 4px;
+  font-size:  24px;
+  padding: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
 
-   a:hover {
-    padding: 8px;
-    color: black;
-    background-color: rgb(228, 194, 3);
-   }
-
+a:hover {
+  padding: 8px;
+  color: black;
+  background-color: rgb(228, 194, 3);
+}
 
 header {
     width: 100%;
@@ -48,13 +47,13 @@ nav {
 }
 
 main {
-    font-family: font79357;
-    font-size: 30px;
-    width: 1350px;
-    height: 650px;
-    margin: 0 auto;
-    text-align: center;
-    text-shadow: 2px 2px black;
+  font-family: font79357;
+  font-size: 30px;
+  width: 1350px;
+  height: 650px;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 #namerow {
@@ -71,7 +70,7 @@ p {
 
 .nameCard {
    
- background-color: transparent;
+  background-color: transparent;
   width: 400px;
   height: 400px;
   border: 2px solid black;
@@ -90,19 +89,19 @@ p {
     transform-style: preserve-3d;
   }
 
-  .nameCard:hover .nameCardInner {
-    transform: scale(1.0);
-    transition-duration: 1s;
-    transform: rotatey(180deg) scale(1.7);
-    background-color: transparent;
-    color: rgb(228, 194, 3);
-    width: 400px;
-    height: 400px;
-    border: 2px solid black;
-    z-index: 10;
-    box-shadow: 5px 5px 20px black;
-    box-shadow: 2px 2px 20px black;
-    border-radius: 4px;
+.nameCard:hover .nameCardInner {
+  transform: scale(1.0);
+  transition-duration: 1s;
+  transform: rotatey(180deg) scale(1.7);
+  background-color: transparent;
+  color: rgb(228, 194, 3);
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  z-index: 10;
+  box-shadow: 5px 5px 20px black;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 4px;
 }
 
 .nameCardFront, .nameCardBack {
@@ -111,7 +110,7 @@ p {
     height: 400px;
     backface-visibility: hidden;
     color: rgb(228, 194, 3);
-  }
+}
 
   .nameCardFront {
     background-color: rgb(29, 67, 235);
@@ -122,6 +121,8 @@ p {
     background-color: rgb(29, 67, 235);
     color: rgb(228, 194, 3);
     transform: rotateY(180deg);
+    text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+
   }
 
   .selfphoto {

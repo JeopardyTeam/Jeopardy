@@ -72,7 +72,7 @@ function one() {
       userPoints.push(100);
       myFunction();
       totalClicks++;
-      document.getElementById('money').innerHTML = '';
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
@@ -83,7 +83,7 @@ function one() {
       userPoints.push(-100);
       myFunction();
       totalClicks++;
-      document.getElementById('money').innerHTML = '';
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
@@ -110,7 +110,7 @@ function two() {
       userPoints.push(200);
       myFunction();
       totalClicks++;
-      document.getElementById('money').innerHTML = '';
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
@@ -121,7 +121,7 @@ function two() {
       userPoints.push(-200);
       myFunction();
       totalClicks++;
-      document.getElementById('money').innerHTML = '';
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
@@ -147,7 +147,7 @@ function three() {
       userPoints.push(300);
       myFunction();
       totalClicks++;
-      document.getElementById('money').innerHTML = '';
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
@@ -158,7 +158,7 @@ function three() {
       userPoints.push(-300);
       myFunction();
       totalClicks++;
-      document.getElementById('money').innerHTML = '';
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
@@ -206,7 +206,10 @@ function myFunction(item) {
   var score =(userPoints.reduce(getSum, 0));
   document.getElementById('scoredata').textContent =`Score: ${score}`;
 }
-function totalclicks(){
-  if (totalClicks === 3)
-}
+function endscreen(){
+  if (totalClicks === 3){
+    alert('boom');
+  }
 
+}
+endscreen();

@@ -275,3 +275,26 @@ p {
   font-size: 30pt;
 
 }
+
+
+.headingBox {
+  /* font-size: 1em; */
+  padding: 10px;
+  /* vertical-align: middle; */
+}
+.card-front-header {
+  background-color: rgb(29, 67, 235);
+  color: rgb(228, 194, 3);
+  height: 100px;
+  width: 100%;
+}
+.categoryTop {
+  font-size: 24px;
+  height: 100%;
+  border: 12px solid black;
+  border-radius: 8px;
+  font-family: font79357;
+  font-weight: 600;
+ }
+
+

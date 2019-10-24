@@ -95,10 +95,11 @@ a {
   background-color: green;
   margin-right: 5px;
   border: none;
-  box-shadow: 2px 2px 20px black;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px black;
   float: left;
   margin: 10px 10px;
+  border-radius:6px;
  }
  #wrongAnswer {
   background-color: red;
@@ -107,6 +108,7 @@ a {
   text-shadow: 1px 1px black;
   float: right;
   margin: 10px 10px;
+  border-radius:6px;
  }
 .row {
   position: relative;

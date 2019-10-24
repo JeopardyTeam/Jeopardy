@@ -2,6 +2,18 @@ html {
   background: rgb(29, 67, 235);
 }
 
+@font-face {
+  font-family: gyparody;
+  src: url(gyparody.ttf);
+}
+
+#logo {
+  font-size: 150px;
+  font-family: gyparody;
+  color: rgb(228, 194, 3);
+  text-shadow: 5px 5px black;
+}
+
 a {
   text-decoration: none;
   text-shadow: none;
@@ -117,12 +129,14 @@ p {
       margin: 10px 5px 5px 5px;
       width: 145px;
       height: 165px;
+      border: 1px solid black;
   }
 
   .AustinPhoto {
     margin: 10px 5px 5px 5px;
     width: 145px;
-    height: 165px;
+    height: 170px;
+    border: 1px solid black;
   }
 
   footer {

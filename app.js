@@ -1,13 +1,32 @@
 'use strict';
-
+//Empty arrays for questions to be generated in.
 var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
+var totalClicks = 0;
 
-var correctAudio = new Audio('/audio/rightanswer.mp3');
-var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
-var themeAudio = new Audio('/audio/jeopardy.mp3');
+// //check local storage
+// if ('userData' in localStorage) {
+//   User.storedUsers = localStorage.getItem('userData');
+//   // console.log(User.storedUsers);
+//   User.parsedUsers = JSON.parse(User.storedUsers);
+//   // console.log(User.parsedUsers);
+//   for (var i = 0; i < User.parsedUsers.length; i++) {
+//     new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
+//     console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+//   }
+//   console.log(User.parsedUsers);
+//   // renderUsers();
+// } else{
+//   handleSubmit();
+// }
 
+//Audio files used on intro and buttons.
+// var correctAudio = new Audio('/audio/rightanswer.mp3');
+// var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
+// var themeAudio = new Audio('/audio/jeopardy.mp3');
+
+//Object literals for Easy, Medium, Hard questions.
 function Easy(question, answer, pointValue) {
   this.question = question;
   this.answer = answer;
@@ -45,10 +64,13 @@ new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 new Hard('Who was the 25th President of the United States?', 'William McKinley', 300);
 var userPoints = [];
-myFunction();
+// myFunction();
 
+//Three functions that assign questions, buttons, and audio functionability. As well as assigning the user points or subtracting points.
 function one() {
+
   for (var i = 0; i < allOneHundred.length; i++) {
+
     var oneHundQuest = document.getElementsByClassName('quest1')[i];
     var firstQuestion = document.createElement('p');
     var btn = document.createElement('button');
@@ -61,20 +83,22 @@ function one() {
     btn.textContent = 'Correct!';
     // console.log(userPoints);
     btn.onclick = function myScore() {
-      correctAudio.play();
+      // correctAudio.play();
       userPoints.push(100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
-
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
-      wrongAudio.play();
+      // wrongAudio.play();
       userPoints.push(-100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
-
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -95,20 +119,22 @@ function two() {
     twoHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
-      correctAudio.play();
+      // correctAudio.play();
       userPoints.push(200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
-
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
-      wrongAudio.play();
+      // wrongAudio.play();
       userPoints.push(-200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
-
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -128,20 +154,22 @@ function three() {
     threeHundQuest.appendChild(wrong);
     btn.textContent = 'Correct!';
     btn.onclick = function myScore() {
-      correctAudio.play();
+      // correctAudio.play();
       userPoints.push(300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
-
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
     wrong.onclick = function myScore() {
-      wrongAudio.play();
+      // wrongAudio.play();
       userPoints.push(-300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
-
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
     };
     wrong.setAttribute('id', 'wrongAnswer');
   }
@@ -152,25 +180,24 @@ three();
 User.allUsers = [];
 
 
-function User(name, score) {
+function User(name) {
   this.name = name;
-  this.score = score;
+  this.score = 0;
   User.allUsers.push(this);
 }
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-themeAudio();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();
   var userName = event.target.username.value;
   console.log(userName);
-  new User(userName, 0);
+  new User(userName);
   userForm.reset();
   document.getElementById('overlay').style.transition = '2s';
   fade();
-  themeAudio.play();
+  // themeAudio.play();
   document.getElementById('overlay').style.visibility = 'hidden';
   document.getElementById('namedata').textContent = `Player: ${userName}`;
 }
@@ -181,12 +208,29 @@ function fade() {
 //add new game button
 //add a game over screen with user score then link to leaderboard page
 
-
 function getSum(total, num) {
   return total + Math.round(num);
 }
-function myFunction(item) {
-  var score = (userPoints.reduce(getSum, 0));
-  document.getElementById('scoredata').textContent = `Score: ${score}`;
-
+function myFunction() {
+  var score =(userPoints.reduce(getSum, 0));
+  console.log(score);
+  document.getElementById('scoredata').textContent =`Score: ${score}`;
+  if(User.allUsers[0]){
+    User.allUsers[0].score += score;
+  }
 }
+function endscreen(){
+  if (totalClicks === 2){
+    console.log(User.allUsers);
+    var User_serialized = JSON.stringify(User.allUsers);
+    localStorage.setItem('userData', User_serialized);
+    window.location.href='highscores.html';
+  }
+}
+// function highscore() {
+//   var score =(userPoints.reduce(getSum, 0));
+//   document.getElementById('yourscore').innerHTML =`Score: ${score}`;
+// }
+// highscore();
+
+

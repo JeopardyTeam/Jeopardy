@@ -7,6 +7,17 @@ header {
   text-align: center;
   text-shadow: 2px 2px black;
 }
+@font-face {
+  font-family: gyparody;
+  src: url(gyparody.ttf);
+}
+
+#logo {
+  font-size: 150px;
+  font-family: gyparody;
+  color: rgb(228, 194, 3);
+  text-shadow: 5px 5px black;
+}
 
 
 a {
@@ -69,5 +80,12 @@ footer {
 
 footer p {
     margin-top: 350px;
+}
+#yourscore{
+  z-index: 20;
+  background-color: chartreuse;
+  height:100%;
+  width: 100%;
+
 }
 

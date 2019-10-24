@@ -202,7 +202,7 @@ function handleSubmit(event) {
   fade();
   // themeAudio.play();
   document.getElementById('overlay').style.visibility = 'hidden';
-  document.getElementById('namedata').textContent = `Username: ${userName}`;
+  document.getElementById('namedata').textContent = `Player: ${userName}`;
 }
 function fade() {
   document.getElementById('overlay').style.opacity = '0';

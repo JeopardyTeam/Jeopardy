@@ -5,21 +5,7 @@ var allTwoHundred = [];
 var allThreeHundred = [];
 var totalClicks = 0;
 
-// //check local storage
-// if ('userData' in localStorage) {
-//   User.storedUsers = localStorage.getItem('userData');
-//   // console.log(User.storedUsers);
-//   User.parsedUsers = JSON.parse(User.storedUsers);
-//   // console.log(User.parsedUsers);
-//   for (var i = 0; i < User.parsedUsers.length; i++) {
-//     new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
-//     console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
-//   }
-//   console.log(User.parsedUsers);
-//   // renderUsers();
-// } else{
-//   handleSubmit();
-// }
+
 
 //Audio files used on intro and buttons.
 // var correctAudio = new Audio('/audio/rightanswer.mp3');
@@ -222,6 +208,22 @@ function myFunction() {
 function endscreen(){
   if (totalClicks === 2){
     console.log(User.allUsers);
+    //check local storage
+if ('userData' in localStorage) {
+  User.storedUsers = localStorage.getItem('userData');
+  // console.log(User.storedUsers);
+  User.parsedUsers = JSON.parse(User.storedUsers);
+  // console.log(User.parsedUsers);
+  for (var i = 0; i < User.parsedUsers.length; i++) {
+    new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
+    console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+  }
+  console.log(User.parsedUsers);
+  // renderUsers();
+} else{
+  handleSubmit();
+}
+
     var User_serialized = JSON.stringify(User.allUsers);
     localStorage.setItem('userData', User_serialized);
     window.location.href='highscores.html';

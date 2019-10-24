@@ -9,6 +9,7 @@ body {
 header {
   width: 100%;
   text-align: center;
+  border-radius: 6px;
 }
 
 @font-face {
@@ -94,7 +95,7 @@ a {
   background-color: green;
   margin-right: 5px;
   border: none;
-  box-shadow: 5px 10px 20px black;
+  box-shadow: 2px 2px 20px black;
   text-shadow: 1px 1px black;
   float: left;
   margin: 10px 10px;
@@ -117,14 +118,14 @@ a {
 }
 #fullscreen {
   background-color: black;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .card {
   font-size: 2.0em;
   background-color: transparent;
   height: 270px;
   border: 20px solid black;
-  border-radius: 8px;
+  border-radius: 6px;
   font-family: font79357;
   font-weight: 600;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
@@ -135,7 +136,7 @@ a {
   z-index: 100;
   font-family: font79357;
   transition-duration: 1s;
-  transform: rotateY(180deg) scale(3);
+  transform: rotateY(180deg) scale(2.5);
   background-color: transparent;
   margin: 0 auto;
   width: 280px;
@@ -151,6 +152,7 @@ a {
   height: 100%;
   backface-visibility: hidden;
   color: rgb(228, 194, 3);
+  border-radius: 6px;
 }
  
 .card-front {
@@ -181,7 +183,6 @@ main {
 #questClick{
   color:black;
 } */
-
 
 #overlay{
   font-family: gyparody;
@@ -232,7 +233,7 @@ footer {
 input {
   width: 300px;
   height: 100px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 24px;
   background-color: lightslategrey;
   border: 5px solid black;
@@ -305,13 +306,14 @@ p {
 }
 
 .headingBox {
-  /* font-size: 1em; */
+  line-height: 80px;
   padding: 10px;
   text-shadow: 2px 2px black;
 }
 
 .card-front-header {
   background-color: rgb(29, 67, 235);
+  border-radius: 6px;
   color: rgb(228, 194, 3);
   height: 100px;
   width: 100%;

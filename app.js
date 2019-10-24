@@ -4,6 +4,8 @@ var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
 
+var totalClicks = 0;
+
 //Audio files used on intro and buttons.
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
@@ -71,6 +73,7 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
+      totalClicks++;
       document.getElementById('money').innerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
@@ -81,6 +84,7 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
+      totalClicks++;
       document.getElementById('money').innerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
@@ -107,6 +111,7 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
+      totalClicks++;
       document.getElementById('money').innerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
@@ -117,6 +122,7 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
+      totalClicks++;
       document.getElementById('money').innerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
@@ -142,6 +148,7 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
+      totalClicks++;
       document.getElementById('money').innerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
@@ -152,6 +159,7 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
+      totalClicks++;
       document.getElementById('money').innerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
@@ -200,5 +208,8 @@ function getSum(total, num) {
 function myFunction(item) {
   var score =(userPoints.reduce(getSum, 0));
   document.getElementById('scoredata').textContent =`Score: ${score}`;
+}
+function totalclicks(){
+  if (totalClicks === 3)
 }
 

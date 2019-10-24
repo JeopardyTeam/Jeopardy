@@ -7,10 +7,14 @@ header {
   text-align: center;
   text-shadow: 2px 2px black;
 }
+@font-face {
+  font-family: gyparody;
+  src: url(gyparody.ttf);
+}
 
 #logo {
   font-size: 150px;
-  font-family: 'gyparody';
+  font-family: gyparody;
   color: rgb(228, 194, 3);
   text-shadow: 5px 5px black;
 }

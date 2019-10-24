@@ -5,8 +5,6 @@ var allTwoHundred = [];
 var allThreeHundred = [];
 var totalClicks = 0;
 
-
-
 //Audio files used on intro and buttons.
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
@@ -38,12 +36,12 @@ function Hard(question, answer, pointValue) {
 new Easy('This tag is needed to run Javascript in an HTML file.', '<script>', 100);
 new Easy('DOM stands for?', 'Document Object Model', 100);
 new Easy('This selector allows you to target every element in a web page', 'maybe 3', 100);
-new Easy('This selector allows you to target every element in a web page', 'maybe 3', 100);
+new Easy('Who lives in a pineapple under the sea?', 'Spongebob Squarepants', 100);
 
 new Medium('In JavaScript, this operator is used to assign a value to a variable.', 'equals(=)', 200);
 new Medium(' HTML attributes and CSS declarations are examples of _____-_____ pairs.', 'key-value', 200);
 new Medium('This property allows you to take an element in normal flow and place it as far to the left or the right of the containing element as possible', 'float', 200);
-new Medium('This property allows you to take an element in normal flow and place it as far to the left or the right of the containing element as possible', 'float', 200);
+new Medium('What is the squareroot of 2704?', '50', 200);
 
 new Hard('This term is used for a function that is associated with (or, attached to) an object', 'method', 300);
 new Hard('This tag is used to create a numbered list.', '<ol>', 300);

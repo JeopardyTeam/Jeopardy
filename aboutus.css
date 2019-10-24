@@ -89,6 +89,8 @@ p {
     border: 2px solid black;
     z-index: 10;
     box-shadow: 5px 5px 20px black;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 4px;
 }
 
 .nameCardFront, .nameCardBack {

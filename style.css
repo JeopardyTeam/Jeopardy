@@ -12,6 +12,13 @@ header {
   text-align: center;
 }
 
+#logo {
+  font-size: 150px;
+  font-family: 'gyparody';
+  color: rgb(228, 194, 3);
+  text-shadow: 5px 5px black;
+}
+
 nav {
   margin: 0 auto;
   text-align: center;
@@ -161,7 +168,7 @@ main {
 } */
 
 #overlay{
-  font-family: font79357;
+  font-family: 'gyparody';
   position: fixed;
   top: 0;
   left: -20px;
@@ -195,11 +202,13 @@ main {
 fieldset {
   border: none;
 }
+
 footer {
   text-align: center;
   color: rgb(228, 194, 3);
   font-family: font79357;
 }
+
 input {
   width: 300px;
   height: 100px;
@@ -237,21 +246,23 @@ input {
 
 }
 
-p{
+p {
   text-shadow: 2px 2px black;
 }
+
 .scoreRow{
   display:inline-block;
   height:50%;
   width:50%;
-
   padding: 5px;
 }
+
 #data{
   background-color: rgb(29, 67, 235);
   width:100%;
   height: 100%;
 }
+
 #namedata{
   display:inline-block;
   width:49%;
@@ -260,6 +271,7 @@ p{
   color:white;
   font-size: 30pt;
 }
+
 #scoredata{
   display:inline-block;
   width:49%;
@@ -267,5 +279,26 @@ p{
   background-color:rgb(29, 67, 235);
   color:white;
   font-size: 30pt;
-
 }
+
+.headingBox {
+  /* font-size: 1em; */
+  padding: 10px;
+  /* vertical-align: middle; */
+}
+
+.card-front-header {
+  background-color: rgb(29, 67, 235);
+  color: rgb(228, 194, 3);
+  height: 100px;
+  width: 100%;
+}
+
+.categoryTop {
+  font-size: 24px;
+  height: 100%;
+  border: 12px solid black;
+  border-radius: 8px;
+  font-family: font79357;
+  font-weight: 600;
+ }

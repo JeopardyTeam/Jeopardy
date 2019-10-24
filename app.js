@@ -157,7 +157,6 @@ function User(name, score) {
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-themeAudio.play();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();

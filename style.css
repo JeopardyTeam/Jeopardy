@@ -129,6 +129,7 @@ a {
   border-radius: 4px;
  }
  
+ 
 .card-front, .card-back {
   position: absolute;
   width: 100%;
@@ -166,8 +167,13 @@ main {
   color:black;
 } */
 
+@font-face {
+  font-family: gyparody;
+  src: url(gyparody.ttf);
+}
+
 #overlay{
-  font-family: 'gyparody';
+  font-family: gyparody;
   position: fixed;
   top: 0;
   left: -20px;

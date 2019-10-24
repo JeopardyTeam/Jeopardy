@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <img src="images/Logo_Jeopardy.png" alt="Jeopardy">
+    <div id="logo">Jeopardy!</div>
     <nav>
       <a href="highscores.html" id="highScores">High Scores</a>
       <a href="aboutus.html" id="aboutUs">About Us</a>
@@ -27,6 +27,13 @@
   <main id='mainEl'>
     <div id='fullscreen'>
       <div class='category1'>
+        <div class='categoryTop'>
+            <div class="row">
+              <div class='card-front-header'>
+                <p class="headingBox"> A Thing Called JS</p>
+              </div>
+            </div>
+          </div>
         <div class='card' id=''>
           <div class="row">
             <div class='card-front'>
@@ -56,8 +63,15 @@
           </div>
         </div>
       </div>
-
+<!--  HTML -->
       <div class='category2'>
+        <div class='categoryTop'>
+            <div class="row">
+              <div class='card-front-header'>
+                <p class="headingBox"> Good Ol' HTML</p>
+              </div>
+            </div>
+          </div>
         <div class='card'>
           <div class="row">
             <div class='card-front'>
@@ -87,6 +101,13 @@
       </div>
 
       <div class='category3'>
+        <div class='categoryTop'>
+            <div class="row">
+              <div class='card-front-header'>
+                <p class="headingBox"> Meh...CSS</p>
+              </div>
+            </div>
+          </div>
         <div class='card'>
           <div class="row">
             <div class='card-front'>
@@ -116,6 +137,13 @@
       </div>
       <!-- fourth column -->
       <div class='category3'>
+        <div class='categoryTop'>
+            <div class="row">
+              <div class='card-front-header'>
+                <p class="headingBox"> Randoms</p>
+              </div>
+            </div>
+          </div>
         <div class='card'>
           <div class="row">
             <div class='card-front'>
@@ -124,7 +152,7 @@
             <div class='card-back quest1'> </div>
           </div>
         </div>
-      
+
         <div class='card'>
           <div class="row">
             <div class='card-front'>
@@ -133,7 +161,7 @@
             <div class='card-back quest2'> </div>
           </div>
         </div>
-      
+
         <div class='card'>
           <div class="row">
             <div class='card-front'>
@@ -150,14 +178,15 @@
       </h2>
     </div>
 
-  <div id="overlay">Welcome to Jeopardy! <br>
-    <form id="user-form">
-      <fieldset>
-        <input id="username" type="text" placeholder="Username..." required="required">
-        <button value="submit" id="button">Play</button>
-      </fieldset>
-    </form>
-      <br> Click to play!</div>
+    <div id="overlay">Welcome to Jeopardy! <br>
+      <form id="user-form">
+        <fieldset>
+          <input id="username" type="text" placeholder="Username..." required="required">
+          <button value="submit" id="button">Play</button>
+        </fieldset>
+      </form>
+      <br> Click to play!
+    </div>
 
   
 
@@ -173,10 +202,10 @@
       // console.log(event.target);
       event.target.class = 'cardFull';
     });
-    </script>
- 
+  </script>
 
-  
+
+
 
 
 </body>

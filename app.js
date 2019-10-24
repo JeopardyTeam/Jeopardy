@@ -41,7 +41,6 @@ new Hard('This term is used for a function that is associated with (or, attached
 new Hard('This tag is used to create a numbered list.', '<ol>', 300);
 new Hard('What is the outside component of the CSS Box Model?', 'margin', 300);
 new Hard('Who was the 25th President of the United States?', 'William McKinley', 300);
-
 var userPoints = [];
 
 function one() {

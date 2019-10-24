@@ -64,7 +64,7 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+      // localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -73,7 +73,7 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+      // localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -98,7 +98,7 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
+      // localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -107,7 +107,7 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
+      // localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -131,7 +131,7 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
+      // localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -140,7 +140,7 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
-      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
+      // localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -151,7 +151,7 @@ three();
 //Saving user scores
 User.allUsers = [];
 
-
+//User constructor
 function User(name, score) {
   this.name = name;
   this.score = score;
@@ -166,6 +166,7 @@ function handleSubmit(event) {
   var userName = event.target.username.value;
   console.log(userName);
   new User(userName, 0);
+  
   userForm.reset();
   document.getElementById('overlay').style.transition = '2s';
   fade();
@@ -177,15 +178,46 @@ function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
 
+
 //add new game button
 //add a game over screen with user score then link to leaderboard page
-
 
 function getSum(total, num) {
   return total + Math.round(num);
 }
+
 function myFunction(item) {
   var score = (userPoints.reduce(getSum, 0));
   document.getElementById('scoredata').textContent = `Score: ${score}`;
-
+  User.usersStringified = JSON.stringify(User.allUsers);
+  localStorage.setItem('userData', User.usersStringified);
 }
+function renderUsers() {
+  for (var i = 0; i < User.allUsers.length; i++) {
+    var playerList = document.getElementById('scoreList');
+    var player = document.createElement('li');
+    player.textContent = `${User.allUsers[i].name} ${User.allUsers[i].score}`;
+  }
+}
+
+  //check local storage
+  if ('userData' in localStorage) {
+    User.storedUsers = localStorage.getItem('userData');
+    // console.log(User.storedUsers);
+    User.parsedUsers = JSON.parse(User.storedUsers);
+    // console.log(User.parsedUsers);
+    for (var i = 0; i < User.parsedUsers.length; i++) {
+      new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
+      console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+    }
+    // console.log(User.parsedUsers);
+    renderUsers();
+  } 
+  // else {
+  //   for (var i = 0; i < User.names.length; i++) {
+  //     new User(User.names[i]);
+  //   }
+  //   // User.prototype.renderUsers();
+  // }
+  //render highscore to leaderboard page
+renderUsers();

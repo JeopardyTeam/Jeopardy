@@ -4,6 +4,8 @@ var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
 
+var totalClick = 0;
+
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
 var themeAudio = new Audio('/audio/jeopardy.mp3');
@@ -61,6 +63,7 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
+      totalClick++;
       this.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
@@ -71,6 +74,7 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
+      totalClick++;
       this.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
@@ -97,6 +101,7 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
+      totalClick++;
       this.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
@@ -107,6 +112,7 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
+      totalClick++;
       this.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
@@ -132,8 +138,8 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
+      totalClick++;
       this.outerHTML = '';
-     
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
@@ -143,6 +149,7 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
+      totalClick++;
       this.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
@@ -192,5 +199,12 @@ function getSum(total, num) {
 function myFunction() {
   var score = (userPoints.reduce(getSum, 0));
   document.getElementById('scoredata').textContent = `Score: ${score}`;
-
 }
+function totalclick(){
+  if (this.totalClick > 2){
+    alert('balls');
+  // var overlay2 = document.createElement('div');
+  // overlay2.textContent = `Game Finished! Score: ${this.score}`;
+  }
+}
+totalclick();

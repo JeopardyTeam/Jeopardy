@@ -4,6 +4,8 @@ var allOneHundred = [];
 var allTwoHundred = [];
 var allThreeHundred = [];
 
+var totalClicks = 0;
+
 //Audio files used on intro and buttons.
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
@@ -69,6 +71,11 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
+      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+
     };
     btn.setAttribute('id', 'rightAnswer');
     wrong.textContent = 'Wrong!';
@@ -76,6 +83,11 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
+      localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
+
     };
     wrong.setAttribute('id', 'wrongAnswer');
 
@@ -99,6 +111,10 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
+      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -107,6 +123,10 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
+      localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -130,6 +150,10 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
+      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     btn.setAttribute('id', 'rightAnswer');
@@ -138,6 +162,10 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
+      localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
     wrong.setAttribute('id', 'wrongAnswer');
@@ -181,8 +209,18 @@ function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction(item) {
-  var score = (userPoints.reduce(getSum, 0));
-  document.getElementById('scoredata').textContent = `Score: ${score}`;
+  var score =(userPoints.reduce(getSum, 0));
+  document.getElementById('scoredata').textContent =`Score: ${score}`;
+}
+function endscreen(){
+  if (totalClicks === 12){
+    window.location.href='highscores.html';
+  }
 
 }
+function highscore() {
+  var score =(userPoints.reduce(getSum, 0));
+  document.getElementById('yourscore').innerHTML =`Score: ${score}`;
+}
+highscore();
 

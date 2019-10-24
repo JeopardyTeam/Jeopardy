@@ -77,4 +77,11 @@ footer {
 footer p {
     margin-top: 350px;
 }
+#yourscore{
+  z-index: 20;
+  background-color: chartreuse;
+  height:100%;
+  width: 100%;
+
+}
 

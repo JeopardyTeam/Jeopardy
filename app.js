@@ -193,6 +193,7 @@ function handleSubmit(event) {
 function fade() {
   document.getElementById('overlay').style.opacity = '0';
 }
+parseData();
 
 //add new game button
 //add a game over screen with user score then link to leaderboard page
@@ -201,37 +202,47 @@ function getSum(total, num) {
   return total + Math.round(num);
 }
 function myFunction() {
-  var score =(userPoints.reduce(getSum, 0));
+  var score = (userPoints.reduce(getSum, 0));
   console.log(score);
-  document.getElementById('scoredata').textContent =`Score: ${score}`;
-  if(User.allUsers[0]){
+  document.getElementById('scoredata').textContent = `Score: ${score}`;
+  if (User.allUsers[0]) {
     User.allUsers[0].score += score;
   }
 }
-function endscreen(){
-  if (totalClicks === 12){
+function endscreen() {
+  if (totalClicks === 2) {
     console.log(User.allUsers);
     //check local storage
-if ('userData' in localStorage) {
-  User.storedUsers = localStorage.getItem('userData');
-  // console.log(User.storedUsers);
-  User.parsedUsers = JSON.parse(User.storedUsers);
-  // console.log(User.parsedUsers);
-  for (var i = 0; i < User.parsedUsers.length; i++) {
-    new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
-    console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
-  }
-  console.log(User.parsedUsers);
-  // renderUsers();
-} else{
-  handleSubmit();
-}
+    if ('userData' in localStorage) {
+      User.storedUsers = localStorage.getItem('userData');
+      // console.log(User.storedUsers);
+      User.parsedUsers = JSON.parse(User.storedUsers);
+      // console.log(User.parsedUsers);
+      for (var i = 0; i < User.parsedUsers.length; i++) {
+        new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
+        console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+      }
+      console.log(User.parsedUsers);
+      // renderUsers();
+    } else {
+      handleSubmit();
+    }
 
     var User_serialized = JSON.stringify(User.allUsers);
     localStorage.setItem('userData', User_serialized);
-    window.location.href='highscores.html';
+    window.location.href = 'highscores.html';
   }
 }
+function parseData(){
+  var scoredata = localStorage.getItem('userData');
+  var parsedUserData = JSON.parse(scoredata);
+  for (var i = 0; i < User.allUsers.length; i++) {
+    new User(User.parsedUserData[i].name, User.parsedUserData[i].score);}
+  var scoreList = document.getElementById('scoreList');
+  var indScore = document.createElement('li');
+  scoreList.appendChild(new User);
+}
+
 // function highscore() {
 //   var score =(userPoints.reduce(getSum, 0));
 //   document.getElementById('yourscore').innerHTML =`Score: ${score}`;
@@ -239,10 +250,10 @@ if ('userData' in localStorage) {
 // highscore();
 
 
-if (totalClick === 2){
-  alert('balls');
-  // var overlay2 = document.createElement('div');
-  // overlay2.textContent = `Game Finished! Score: ${this.score}`;
-}
-}
+// if (totalClick === 2) {
+//   alert('balls');
+//   // var overlay2 = document.createElement('div');
+//   // overlay2.textContent = `Game Finished! Score: ${this.score}`;
+// }
+
 endscreen();

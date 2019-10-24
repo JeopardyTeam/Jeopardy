@@ -166,8 +166,13 @@ main {
   color:black;
 } */
 
+@font-face {
+  font-family: gyparody;
+  src: url(gyparody.ttf);
+}
+
 #overlay{
-  font-family: 'gyparody';
+  font-family: gyparody;
   position: fixed;
   top: 0;
   left: -20px;

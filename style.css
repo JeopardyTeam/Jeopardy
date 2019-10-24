@@ -108,7 +108,7 @@ a {
 .card {
   font-size: 2.0em;
   background-color: transparent;
-  width: 280px;
+  /* width: 280px; */
   height: 270px;
   border: 15px solid black;
   border-radius: 8px;
@@ -120,7 +120,7 @@ a {
   z-index: 100;
   font-family: font79357;
   transition-duration: 1s;
-  transform: rotateY(180deg) scale(3);
+  transform: rotateY(180deg) scale(2.5);
   background-color: transparent;
   margin: 0 auto;
   width: 280px;
@@ -210,7 +210,7 @@ input {
   width: 300px;
   height: 100px;
   border-radius: 4px;
-  font-size: 24px;
+  font-size: 0.15em;
   background-color: lightslategrey;
   border: 5px solid black;
   padding: 10px;
@@ -240,7 +240,7 @@ input {
 
 ::placeholder {
   color: black;
-
+  font-size: 1.5em;
 }
 
 p {
@@ -276,11 +276,8 @@ p {
 
 }
 
-
 .headingBox {
-  /* font-size: 1em; */
   padding: 10px;
-  /* vertical-align: middle; */
 }
 .card-front-header {
   background-color: rgb(29, 67, 235);

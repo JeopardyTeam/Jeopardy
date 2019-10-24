@@ -5,6 +5,9 @@ var allTwoHundred = [];
 var allThreeHundred = [];
 var totalClick = 0;
 
+var totalClicks = 0;
+
+//Audio files used on intro and buttons.
 var correctAudio = new Audio('/audio/rightanswer.mp3');
 var wrongAudio = new Audio('/audio/Wrong-answer-sound-effect.mp3');
 var themeAudio = new Audio('/audio/jeopardy.mp3');
@@ -72,8 +75,9 @@ function one() {
       correctAudio.play();
       userPoints.push(100);
       myFunction();
-      totalClick++;
-      this.outerHTML = '';
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
@@ -83,8 +87,9 @@ function one() {
       wrongAudio.play();
       userPoints.push(-100);
       myFunction();
-      totalClick++;
-      this.outerHTML = '';
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allOneHundred));
 
     };
@@ -110,8 +115,9 @@ function two() {
       correctAudio.play();
       userPoints.push(200);
       myFunction();
-      totalClick++;
-      this.outerHTML = '';
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
@@ -121,8 +127,9 @@ function two() {
       wrongAudio.play();
       userPoints.push(-200);
       myFunction();
-      totalClick++;
-      this.outerHTML = '';
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allTwoHundred));
 
     };
@@ -147,8 +154,9 @@ function three() {
       correctAudio.play();
       userPoints.push(300);
       myFunction();
-      totalClick++;
-      this.outerHTML = '';
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
@@ -158,8 +166,9 @@ function three() {
       wrongAudio.play();
       userPoints.push(-300);
       myFunction();
-      totalClick++;
-      this.outerHTML = '';
+      totalClicks++;
+      endscreen();
+      event.target.outerHTML = '';
       localStorage.setItem('userPoints', JSON.stringify(allThreeHundred));
 
     };
@@ -203,12 +212,21 @@ function fade() {
 function getSum(total, num) {
   return total + Math.round(num);
 }
-function myFunction() {
-  var score = (userPoints.reduce(getSum, 0));
-  document.getElementById('scoredata').textContent = `Score: ${score}`;
+function myFunction(item) {
+  var score =(userPoints.reduce(getSum, 0));
+  document.getElementById('scoredata').textContent =`Score: ${score}`;
 }
 function endscreen(){
+  if (totalClicks === 12){
+    window.location.href='highscores.html';
+  }
 
+}
+function highscore() {
+  var score =(userPoints.reduce(getSum, 0));
+  document.getElementById('yourscore').innerHTML =`Score: ${score}`;
+}
+highscore();
 
 if (totalClick === 2){
   alert('balls');

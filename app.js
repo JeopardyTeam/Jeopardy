@@ -204,29 +204,52 @@ function myFunction() {
   }
 }
 function endscreen(){
-  if (totalClicks === 12){
+  if (totalClicks === 2){
     console.log(User.allUsers);
-      //check local storage
-  if ('userData' in localStorage) {
-    User.storedUsers = localStorage.getItem('userData');
-    // console.log(User.storedUsers);
-    User.parsedUsers = JSON.parse(User.storedUsers);
-    // console.log(User.parsedUsers);
-    for (var i = 0; i < User.parsedUsers.length; i++) {
-      new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
-      console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
-    }
-    console.log(User.parsedUsers);
+    //check local storage
+    if ('userData' in localStorage) {
+      User.storedUsers = localStorage.getItem('userData');
+      // console.log(User.storedUsers);
+      User.parsedUsers = JSON.parse(User.storedUsers);
+      // console.log(User.parsedUsers);
+      for (var i = 0; i < User.parsedUsers.length; i++) {
+        new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
+        // console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+      }
+      // console.log(User.parsedUsers);
     // renderUsers();
-  } else{
-    handleSubmit();
-}
+    } else{
+      // handleSubmit();
+    }
 
     var User_serialized = JSON.stringify(User.allUsers);
     localStorage.setItem('userData', User_serialized);
     window.location.href='highscores.html';
   }
+
 }
+
+// function highscoreData(){
+
+//   var getData = localStorage.getItem('userData');
+//   var parseData = JSON.parse(getData);
+
+
+
+//   for (var i = 0; i < parseData.length; i++) {
+//     var scoreLine = (parseData[i].name, parseData[i].score);
+//     var userScore = document.createElement('li');
+//     userScore.textContent = scoreLine;
+//     var getList = document.getElementById('scoreList');
+//     getList.appendChild(userScore);
+
+
+//   }
+
+
+
+// }
+// highscoreData();
 // function highscore() {
 //   var score =(userPoints.reduce(getSum, 0));
 //   document.getElementById('yourscore').innerHTML =`Score: ${score}`;

@@ -52,13 +52,11 @@ myFunction();
 //Three functions that assign questions, buttons, and audio functionability. As well as assigning the user points or subtracting points.
 function one() {
 
-
-    var btn = document.createElement('button');
-
   for (var i = 0; i < allOneHundred.length; i++) {
 
     var oneHundQuest = document.getElementsByClassName('quest1')[i];
     var firstQuestion = document.createElement('p');
+    var btn = document.createElement('button');
     var wrong = document.createElement('button');
 
     firstQuestion.textContent = `${allOneHundred[i].question}`;
@@ -159,7 +157,6 @@ function User(name, score) {
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
-themeAudio.play();
 //input validation for username
 function handleSubmit(event) {
   event.preventDefault();

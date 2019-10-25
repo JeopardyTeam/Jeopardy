@@ -218,29 +218,42 @@ function endscreen() {
       // console.log(User.parsedUsers);
       for (var i = 0; i < User.parsedUsers.length; i++) {
         new User(User.parsedUsers[i].name, User.parsedUsers[i].score);
-        console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
+        // console.log(User.parsedUsers[i].name, User.parsedUsers[i].score);
       }
-      console.log(User.parsedUsers);
-      // renderUsers();
-    } else {
-      handleSubmit();
+      // console.log(User.parsedUsers);
+    // renderUsers();
+    } else{
+      // handleSubmit();
     }
 
     var User_serialized = JSON.stringify(User.allUsers);
     localStorage.setItem('userData', User_serialized);
     window.location.href = 'highscores.html';
   }
-}
-function parseData(){
-  var scoredata = localStorage.getItem('userData');
-  var parsedUserData = JSON.parse(scoredata);
-  for (var i = 0; i < User.allUsers.length; i++) {
-    new User(User.parsedUserData[i].name, User.parsedUserData[i].score);}
-  var scoreList = document.getElementById('scoreList');
-  var indScore = document.createElement('li');
-  scoreList.appendChild(new User);
+
 }
 
+// function highscoreData(){
+
+//   var getData = localStorage.getItem('userData');
+//   var parseData = JSON.parse(getData);
+
+
+
+//   for (var i = 0; i < parseData.length; i++) {
+//     var scoreLine = (parseData[i].name, parseData[i].score);
+//     var userScore = document.createElement('li');
+//     userScore.textContent = scoreLine;
+//     var getList = document.getElementById('scoreList');
+//     getList.appendChild(userScore);
+
+
+//   }
+
+
+
+// }
+// highscoreData();
 // function highscore() {
 //   var score =(userPoints.reduce(getSum, 0));
 //   document.getElementById('yourscore').innerHTML =`Score: ${score}`;

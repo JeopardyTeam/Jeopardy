@@ -208,7 +208,7 @@ function myFunction() {
   }
 }
 function endscreen() {
-  if (totalClicks === 2) {
+  if (totalClicks === 5) {
     console.log(User.allUsers);
     //check local storage
     if ('userData' in localStorage) {

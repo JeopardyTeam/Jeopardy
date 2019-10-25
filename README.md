@@ -1,4 +1,4 @@
-# Jeoparody
+# This is Jeoparody
 
 ## About the project
 Built By Terrell Douglas, Jerica Mitchell, Austin Smith, and Krystal Madrinan
